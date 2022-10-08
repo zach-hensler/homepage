@@ -1,0 +1,17 @@
+.header {
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.header-item {
+    height: 100%;
+    width: auto;
+    border-radius: 0;
+    border-width: 0 2px 0 2px;
+    border-color: grey;
+    padding: 20px;
+    margin: 0 10px 0 10px;
+    font-size: medium;
+    font-weight: bold;
+}
