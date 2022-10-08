@@ -5,10 +5,12 @@ import '../css/Header.css';
 import useNavigation from '../hooks/useNavigation';
 
 export const Header:React.FC = () => {
-    const { updateCurrentRoute } = useNavigation();
+    const { currentRoute, updateCurrentRoute } = useNavigation();
     const headerLinks = Object.keys(routes).map((path) => {
+
+        const classes = `header-item ${currentRoute === path ? 'header-item-selected' : ''}`
         return (
-            <button className='header-item' onClick={() => updateCurrentRoute(path)} key={path}>{path}</button>
+            <button className={classes} onClick={() => updateCurrentRoute(path)} key={path}>{path}</button>
         );
     });
 
