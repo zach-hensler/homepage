@@ -7,6 +7,7 @@
 .header-item {
     height: 100%;
     width: auto;
+    background-color: transparent;
     border-radius: 0;
     border-width: 0 2px 0 2px;
     border-color: grey;
@@ -14,4 +15,10 @@
     margin: 0 10px 0 10px;
     font-size: medium;
     font-weight: bold;
+}
+
+.header-item-selected {
+    font-weight: bolder;
+    background-color: cornflowerblue;
+    border-color: black;
 }
