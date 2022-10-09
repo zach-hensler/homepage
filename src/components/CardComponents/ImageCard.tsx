@@ -1,9 +1,9 @@
 import React from 'react';
 
-import '../css/App.css';
-import '../css/Card.css';
+import '../../css/App.css';
+import '../../css/Card.css';
 
-interface CardProps {
+interface ImageCardProps {
     imageSource: string
     imageAltText: string
     imageSide: 'left'|'right'
@@ -11,7 +11,7 @@ interface CardProps {
     cardBody: string|JSX.Element
 }
 
-export const Card:React.FC<CardProps> = ({
+export const ImageCard:React.FC<ImageCardProps> = ({
     imageSource,
     imageAltText,
     imageSide,

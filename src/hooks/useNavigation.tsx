@@ -7,7 +7,7 @@ interface NavigationMethods {
 }
 
 const NavigationContext = React.createContext<NavigationMethods>({
-    currentRoute: Object.keys(routes)[0],
+    currentRoute: 'Home',
     updateCurrentRoute: () => {console.error('Initial Navigation Method not overridden...');}
 });
 export const NavigationProvider = ({ children }: { children: JSX.Element }) => {
