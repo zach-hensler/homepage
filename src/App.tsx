@@ -1,14 +1,15 @@
-import React from 'react';
-import './css/App.css';
-import { Header, WorkflowRenderer } from './components';
+import React from "react";
+import "./css/App.css";
+import { Header, Footer, WorkflowRenderer } from "./components";
 
 const App = () => {
-  return (
-    <div className="App">
-      <Header />
-      <WorkflowRenderer />
-    </div>
-  );
-}
+    return (
+        <div className="App">
+            <Header />
+            <WorkflowRenderer />
+            <Footer />
+        </div>
+    );
+};
 
 export default App;

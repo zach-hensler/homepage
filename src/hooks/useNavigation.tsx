@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { routes } from '../constants/routes';
+import React, { useContext, useState } from "react";
+import { routes } from "../constants/routes";
 
 interface NavigationMethods {
     currentRoute: string;
@@ -7,8 +7,8 @@ interface NavigationMethods {
 }
 
 const NavigationContext = React.createContext<NavigationMethods>({
-    currentRoute: 'Home',
-    updateCurrentRoute: () => {console.error('Initial Navigation Method not overridden...');}
+    currentRoute: "Home",
+    updateCurrentRoute: () => {console.error("Initial Navigation Method not overridden...");},
 });
 export const NavigationProvider = ({ children }: { children: JSX.Element }) => {
     const [currentRoute, setCurrentRoute] = useState<string>(Object.keys(routes)[0]);
@@ -26,12 +26,11 @@ export const NavigationProvider = ({ children }: { children: JSX.Element }) => {
     return (
         <NavigationContext.Provider value={{
             currentRoute,
-            updateCurrentRoute
+            updateCurrentRoute,
         }}>
             {children}
         </NavigationContext.Provider>
-    )
-}
+    );
+};
 
-const useNavigation = () => useContext(NavigationContext);
-export default useNavigation;
+export const useNavigation = () => useContext(NavigationContext);

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import '../../css/Card.css';
+import "../../css/Card.css";
 
 export interface CardProps {
     cardHeader: string
@@ -13,20 +13,20 @@ export const Card:React.FC<CardProps> = ({
     cardHeader,
     cardBody,
     buttonText,
-    onButtonClick
+    onButtonClick,
 }) => {
     const button = (buttonText && onButtonClick) ? (
-        <div className='card-button-container'>
-            <button className='card-button' onClick={onButtonClick}>{buttonText}</button>
+        <div className="card-button-container">
+            <button className="card-button" onClick={onButtonClick}>{buttonText}</button>
         </div>
     ) : <></>;
 
     return (
-        <div className='card-container'>
+        <div className="card-container">
             <h3>{cardHeader}</h3>
             <hr />
             {cardBody}
             {button}
         </div>
-    )
+    );
 };
