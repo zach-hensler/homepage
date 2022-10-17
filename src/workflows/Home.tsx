@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import { Card, CardRow, ImageCard } from '../components';
-import useNavigation from '../hooks/useNavigation';
+import { Card, CardRow, ImageCard } from "../components";
+import { useNavigation } from "../hooks";
 
 export const Home:React.FC = () => {
     const { updateCurrentRoute } = useNavigation();
@@ -10,10 +10,10 @@ export const Home:React.FC = () => {
         <div>
             <h2>Home</h2>
             <ImageCard
-                imageSource={process.env.PUBLIC_URL+'/img/Ivy_and_Zeus.jpg'}
-                imageAltText='My Cats: Ivy and Zeus'
-                imageSide='left'
-                headerText='Zach Hensler'
+                imageSource={process.env.PUBLIC_URL+"/img/Ivy_and_Zeus.jpg"}
+                imageAltText="My Cats: Ivy and Zeus"
+                imageSide="left"
+                headerText="Zach Hensler"
                 cardBody={
                     <div>
                         <p>
@@ -24,13 +24,13 @@ export const Home:React.FC = () => {
                     </div>
                 }
             />
-            <hr style={{ margin: '40px 0px' }} />
+            <hr style={{ margin: "40px 0px" }} />
             <CardRow
                 CardOne={
                     <Card
-                        cardHeader='Projects'
+                        cardHeader="Projects"
                         cardBody={
-                            <div style={{ textAlign: 'left' }}>
+                            <div style={{ textAlign: "left" }}>
                                 <p>I am working on several personal projects including:</p>
                                 <ul>
                                     <li>This project!</li>
@@ -39,12 +39,12 @@ export const Home:React.FC = () => {
                             </div>
                         }
                         buttonText="Learn More"
-                        onButtonClick={() => updateCurrentRoute('Projects')}
+                        onButtonClick={() => updateCurrentRoute("Projects")}
                     />
                 }
                 CardTwo={
                     <Card
-                        cardHeader='Technology Experience'
+                        cardHeader="Technology Experience"
                         cardBody={
                             <div>
                                 <p>React</p>
@@ -53,7 +53,7 @@ export const Home:React.FC = () => {
                             </div>
                         }
                         buttonText="Learn More"
-                        onButtonClick={() => updateCurrentRoute('About')}
+                        onButtonClick={() => updateCurrentRoute("About")}
                     />
                 }
             />

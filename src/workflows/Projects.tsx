@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Projects: React.FC = () => {
     return (
@@ -8,5 +8,5 @@ export const Projects: React.FC = () => {
                 <li>View the code for <a href="https://github.com/zach-hensler/homepage" rel="noreferrer noopener" target="_blank">this project on github</a></li>
             </ul>
         </div>
-    )
+    );
 };

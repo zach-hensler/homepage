@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import '../../css/App.css';
-import '../../css/Card.css';
+import "../../css/App.css";
+import "../../css/Card.css";
 
 interface ImageCardProps {
     imageSource: string
     imageAltText: string
-    imageSide: 'left'|'right'
+    imageSide: "left"|"right"
     headerText: string
     cardBody: string|JSX.Element
 }
@@ -16,24 +16,23 @@ export const ImageCard:React.FC<ImageCardProps> = ({
     imageAltText,
     imageSide,
     headerText,
-    cardBody
+    cardBody,
 }) => {
-    const imageClass = `card-image ${imageSide === 'right' ? 'float-right' : ''}`
-    const image = <img src={imageSource} alt={imageAltText} className={imageClass} />;
+    const image = <img src={imageSource} alt={imageAltText} className="card-image" />;
 
-    const bodyClass = `card-body-container ${imageSide === 'right' ? '' : 'float-right'}`
     const bodyContent = (
-        <div className={bodyClass}>
+        <div className="card-body-container">
             <h3>{headerText}</h3>
             <hr />
             {cardBody}
         </div>
     );
 
+    const imageCardBody = imageSide === "left" ? <>{image}{bodyContent}</> : <>{bodyContent}{image}</>;
+
     return (
-        <div className='card-container'>
-            {image}
-            {bodyContent}
+        <div className="image-card-container">
+            {imageCardBody}
         </div>
-    )
-}
+    );
+};
