@@ -8,6 +8,5 @@ export const WorkflowRenderer = () => {
     const screenSize = useScreenSize();
 
     const className = screenSize === "large" ? "workflow-container" : "workflow-container-small";
-    console.log(screenSize);
     return <div className={className}>{routes[currentRoute]}</div>;
 };
