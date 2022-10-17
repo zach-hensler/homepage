@@ -1,5 +1,17 @@
+import { useLayoutEffect, useState } from "react";
+
 export const useScreenSize = () => {
-    const width = window.screen.width;
+    const [width, setWidth] = useState<number>(0);
+
+    useLayoutEffect(() => {
+
+        const updateSize = () => {
+            setWidth(window.screen.width);
+        };
+        window.addEventListener("resize", updateSize);
+        updateSize();
+        return () => window.removeEventListener("resize", updateSize);
+    }, []);
 
     if (width > 1100) {
         return "large";
