@@ -28,18 +28,21 @@ export const Home:React.FC = () => {
             <CardRow
                 CardOne={
                     <Card
-                        cardHeader="Projects"
+                        cardHeader="About Me"
                         cardBody={
                             <div style={{ textAlign: "left" }}>
-                                <p>I am working on several personal projects including:</p>
+                                <p>I am a:</p>
                                 <ul>
-                                    <li>This project!</li>
-                                    <li>Others?</li>
+                                    <li>Purdue Graduate</li>
+                                    <li>Computer Engineering Major</li>
+                                    <li>React/Typescript Fan</li>
+                                    <li>Casual Cook</li>
+                                    <li>Enjoyer of Games</li>
                                 </ul>
                             </div>
                         }
                         buttonText="Learn More"
-                        onButtonClick={() => updateCurrentRoute("Projects")}
+                        onButtonClick={() => updateCurrentRoute("About")}
                     />
                 }
                 CardTwo={
@@ -53,7 +56,7 @@ export const Home:React.FC = () => {
                             </div>
                         }
                         buttonText="Learn More"
-                        onButtonClick={() => updateCurrentRoute("About")}
+                        onButtonClick={() => updateCurrentRoute("Technology")}
                     />
                 }
             />

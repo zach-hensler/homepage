@@ -1,9 +1,8 @@
 import React from "react";
-import { Home, About } from "../workflows";
-import { Projects } from "../workflows/Projects";
+import { Home, About, Technology } from "../workflows";
 
 export const routes: {[path: string]: JSX.Element} = {
     Home: <Home />,
-    Projects: <Projects />,
+    Technology: <Technology />,
     About: <About />,
 };
