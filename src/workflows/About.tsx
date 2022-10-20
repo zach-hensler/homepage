@@ -8,7 +8,12 @@ export const About:React.FC = () => {
                 <li>I am a Purdue Graduate</li>
                 <li>I am a front end develop proficient in React</li>
                 <li>I am not a fan of css</li>
-                <li><a href="https://github.com/zach-hensler" rel="noreferrer noopener" target="_blank">Checkout my github</a></li>
+                <li><a href="https://github.com/zach-hensler" rel="noreferrer noopener" target="_blank">
+                    Checkout my github
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/zhensler/" rel="noreferrer noopener" target="_blank">
+                    My LinkedIn
+                </a></li>
             </ul>
         </div>
     );
