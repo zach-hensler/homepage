@@ -3,28 +3,33 @@ import React from "react";
 import "../../css/Card.css";
 
 export interface CardProps {
-    cardHeader: string
+    cardHeader?: string
     cardBody: JSX.Element|string,
     buttonText?: string,
-    onButtonClick?: () => void
+    onClick?: () => void
 }
 
 export const Card:React.FC<CardProps> = ({
     cardHeader,
     cardBody,
     buttonText,
-    onButtonClick,
+    onClick = () => undefined,
 }) => {
-    const button = (buttonText && onButtonClick) ? (
-        <div className="card-button-container">
-            <button className="card-button" onClick={onButtonClick}>{buttonText}</button>
-        </div>
-    ) : <></>;
+    const button = (buttonText && onClick)
+        ? (
+            <div className="card-button-container">
+                <button className="card-button" onClick={onClick}>{buttonText}</button>
+            </div>
+        )
+        : <></>;
+
+    const header = cardHeader
+        ? <><h3>{cardHeader}</h3><hr /></>
+        : <></>;
 
     return (
-        <div className="card-container">
-            <h3>{cardHeader}</h3>
-            <hr />
+        <div className="card-container" onClick={onClick}>
+            {header}
             {cardBody}
             {button}
         </div>

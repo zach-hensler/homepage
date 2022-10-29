@@ -10,7 +10,22 @@
     align-items: stretch;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.card-row-child.two-cards {
     width: 40%;
+    min-width: 300px;
+    margin: 10px 5% 5% 40px;
+}
+
+.card-row-child.three-cards {
+    width: 25%;
+    min-width: 300px;
+    margin: 10px 2.5% 2.5% 40px;
+}
+
+.card-row-child.four-cards {
+    width: 15%;
     min-width: 300px;
     margin: 10px 20px 20px 40px;
 }
@@ -33,8 +48,9 @@
 }
 
 .card-image {
-    width: 100%;
-    flex: 300px 1;
+    max-width: 100%;
+    width: auto;
+    max-height: 300px;
     padding: 0 20px;
 }
 
