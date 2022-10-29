@@ -26,6 +26,7 @@ export const NavigationProvider = ({ children }: { children: JSX.Element }) => {
         const route = initialPath.split("?")[1];
     
         if (!validateRoute(route)) {
+            setCurrentRoute("Home");
             return;
         }
         
