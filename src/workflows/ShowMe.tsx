@@ -3,18 +3,20 @@ import { Card, CardRow } from "../components";
 
 import { animalTypes } from "../helperFunctions";
 
-export const ShowMe = () => {
+type animalImage = { imageSource?: string, imageType?: string, id?: number }
 
+export const ShowMe = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const [animalType, setAnimalType] = useState<{name?: string, fetch?: () => Promise<string|void>}>({});
-    const [animalImage, setAnimalImage] = useState<string>("");
-    const [imageHistory, setImageHistory] = useState<string[]>([]);
+    const [animalImage, setAnimalImage] = useState<animalImage>({});
+    const [imageHistory, setImageHistory] = useState<animalImage[]>([]);
 
     const getRandomThingType = () => {
-        setAnimalType(animalTypes[Math.floor(Math.random() * animalTypes.length)]);
+        const newAnimalIndex = Math.floor(Math.random() * animalTypes.length);
+        setAnimalType({ ...animalTypes[newAnimalIndex] });
     };
 
-    const pushImageToHistory = (image: string) => {
+    const pushImageToHistory = (image: animalImage) => {
         setImageHistory(prevHistory => [image, ...prevHistory].slice(0,4));        
     };
 
@@ -25,8 +27,10 @@ export const ShowMe = () => {
         animalType.fetch()
             .then(image => {
                 if (!image) { return; }
-                setAnimalImage(image);
-                pushImageToHistory(image);
+                const imageId = imageHistory?.[0]?.id ? imageHistory?.[0]?.id + 1 : 0;
+                const newAnimalImage = { imageSource: image, imageType: animalType.name, id: imageId };
+                setAnimalImage(newAnimalImage);
+                pushImageToHistory(newAnimalImage);
             })
             .catch(error => console.error(error))
             .finally(() => setLoading(false));
@@ -36,11 +40,11 @@ export const ShowMe = () => {
         return (
             <CardRow
                 Cards={
-                    imageHistory.map((imageSource, idx) => (
+                    imageHistory.map((animalImage) => (
                         <Card
-                            cardBody={<img src={imageSource} style={{ maxWidth: "100%" }} />}
-                            onClick={() => setAnimalImage(imageSource)}
-                            key={`image-${idx}`}
+                            cardBody={<img src={animalImage.imageSource} style={{ maxWidth: "100%", maxHeight: "200px"  }} />}
+                            onClick={() => setAnimalImage(animalImage)}
+                            key={`image-${animalImage.id}`}
                         />
                     ))
                 }
@@ -50,9 +54,9 @@ export const ShowMe = () => {
 
     return (
         <div>
-            <h2>Show me a ... {animalType?.name}</h2>
+            <h2>Show me a ... {animalImage?.imageType}</h2>
             <div><button disabled={loading} onClick={getRandomThingType}>{loading ? "Loading..." : "New animal!"}</button></div>
-            <div style={{ height: "350px", paddingTop: "20px", paddingBottom: "20px" }}><img style={{ maxWidth: "300px", maxHeight: "300px" }} src={animalImage} /></div>
+            <div style={{ height: "350px", paddingTop: "20px", paddingBottom: "20px" }}><img style={{ maxWidth: "300px", maxHeight: "300px" }} src={animalImage.imageSource} /></div>
             {imageHistory?.length ? <hr /> : <></>}
             {renderHistoryImages()}
         </div>
