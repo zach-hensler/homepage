@@ -26,8 +26,9 @@ export const Home:React.FC = () => {
             />
             <hr style={{ margin: "40px 0px" }} />
             <CardRow
-                CardOne={
+                Cards={[
                     <Card
+                        key="about-me-home-card"
                         cardHeader="About Me"
                         cardBody={
                             <div style={{ textAlign: "left" }}>
@@ -42,11 +43,10 @@ export const Home:React.FC = () => {
                             </div>
                         }
                         buttonText="Learn More"
-                        onButtonClick={() => updateCurrentRoute("About")}
-                    />
-                }
-                CardTwo={
+                        onClick={() => updateCurrentRoute("About")}
+                    />,
                     <Card
+                        key="tech-experience-card"
                         cardHeader="Technology Experience"
                         cardBody={
                             <div>
@@ -56,9 +56,9 @@ export const Home:React.FC = () => {
                             </div>
                         }
                         buttonText="Learn More"
-                        onButtonClick={() => updateCurrentRoute("Technology")}
-                    />
-                }
+                        onClick={() => updateCurrentRoute("Technology")}
+                    />,
+                ]}
             />
         </div>
     );

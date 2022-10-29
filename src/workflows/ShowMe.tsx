@@ -1,34 +1,60 @@
 import React, { useEffect, useState } from "react";
+import { Card, CardRow } from "../components";
 
-import { getCatImage, getDogImage, getFoxImage } from "../helperFunctions";
+import { animalTypes } from "../helperFunctions";
 
 export const ShowMe = () => {
-    const listOfThings = [
-        {name: "Cat", fetch: getCatImage},
-        {name: "Dog", fetch: getDogImage},
-        {name: "Fox", fetch: getFoxImage},
-    ];
 
-    const [thingType, setThingType] = useState<{name?: string, fetch?: () => Promise<string|void>}>({});
-    const [thingImage, setThingImage] = useState<string>("");
+    const [loading, setLoading] = useState<boolean>(false);
+    const [animalType, setAnimalType] = useState<{name?: string, fetch?: () => Promise<string|void>}>({});
+    const [animalImage, setAnimalImage] = useState<string>("");
+    const [imageHistory, setImageHistory] = useState<string[]>([]);
 
     const getRandomThingType = () => {
-        setThingType(listOfThings[Math.floor(Math.random() * listOfThings.length)]);
+        setAnimalType(animalTypes[Math.floor(Math.random() * animalTypes.length)]);
+    };
+
+    const pushImageToHistory = (image: string) => {
+        setImageHistory(prevHistory => [image, ...prevHistory].slice(0,4));        
     };
 
     useEffect(() => {
-        if (!thingType?.fetch) { return; }
-        thingType.fetch()
+        if (!animalType?.fetch) return;
+
+        setLoading(true);
+        animalType.fetch()
             .then(image => {
                 if (!image) { return; }
-                setThingImage(image);
+                setAnimalImage(image);
+                pushImageToHistory(image);
             })
-            .catch(error => console.error(error));
-    }, [thingType]);
+            .catch(error => console.error(error))
+            .finally(() => setLoading(false));
+    }, [animalType]);
 
-    return <div>
-        <h2>Show me a ... {thingType?.name}</h2>
-        <div><button onClick={getRandomThingType}>New thing!</button></div>
-        <img style={{ maxWidth: "300px", maxHeight: "300px" }} src={thingImage} />
-    </div>;
+    const renderHistoryImages = () => {
+        return (
+            <CardRow
+                Cards={
+                    imageHistory.map((imageSource, idx) => (
+                        <Card
+                            cardBody={<img src={imageSource} style={{ maxWidth: "100%" }} />}
+                            onClick={() => setAnimalImage(imageSource)}
+                            key={`image-${idx}`}
+                        />
+                    ))
+                }
+            />
+        );
+    };
+
+    return (
+        <div>
+            <h2>Show me a ... {animalType?.name}</h2>
+            <div><button disabled={loading} onClick={getRandomThingType}>{loading ? "Loading..." : "New animal!"}</button></div>
+            <div style={{ height: "350px", paddingTop: "20px", paddingBottom: "20px" }}><img style={{ maxWidth: "300px", maxHeight: "300px" }} src={animalImage} /></div>
+            {imageHistory?.length ? <hr /> : <></>}
+            {renderHistoryImages()}
+        </div>
+    );
 };

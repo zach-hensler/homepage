@@ -20,7 +20,7 @@ export const Technology = () => {
                 }
             />
             <ImageCard
-                imageSource="https://cdn.icon-icons.com/icons2/2415/PNG/512/typescript_original_logo_icon_146317.png"
+                imageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png"
                 imageAltText="Typescript"
                 imageSide="right"
                 headerText="Typescript"
