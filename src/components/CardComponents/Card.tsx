@@ -18,7 +18,7 @@ export const Card:React.FC<CardProps> = ({
     const button = (buttonText && onClick)
         ? (
             <div className="card-button-container">
-                <button className="card-button" onClick={onClick}>{buttonText}</button>
+                <button className="card-button">{buttonText}</button>
             </div>
         )
         : <></>;
