@@ -33,18 +33,18 @@ export const NavigationProvider = ({ children }: { children: JSX.Element }) => {
         setCurrentRoute(route);
     };
 
-    // set route when page initially loads
+    // set route when page initially loads (handles refreshes)
     useEffect(() => {
         updateInternalRouteToPath();
     }, []);
 
-    // set event listeners for forwards and back buttons
+    // handles back and forward presses in the browser
     useEffect(() => {
         addEventListener("popstate", updateInternalRouteToPath);
     }, []);
 
+    // exposed method for inter-application navigation
     const updateCurrentRoute = (newRoute: string) => {
-        // attempted route doesn't exist in route array
         if (!validateRoute(newRoute)) {
             console.error(`Attempted to navigate to invalid route: ${newRoute}`);
             return;
