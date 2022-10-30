@@ -31,10 +31,19 @@
 }
 
 .card-container {
-    border: solid black 2px;
+    background-color: white;
+    border: solid #222222 2px;
     padding: 20px;
     box-shadow: 20px 10px 10px lightgray;
     width: 100%;
+}
+
+.card-container:hover {
+    background-color: #BBCDE5;
+}
+
+.card-container hr {
+    border-color: #1C5D99;
 }
 
 .image-card-container {
@@ -45,6 +54,11 @@
     justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 40px;
+}
+
+.image-card-container:hover {
+    background-color: #1C5D99;
+    color: white;
 }
 
 .card-image {
@@ -58,6 +72,10 @@
     width: 40%;
     min-width: 300px;
     flex: 3;
+}
+
+.card-body-container hr {
+    border-color: #1C5D99;
 }
 
 .card-button-container {

@@ -60,7 +60,10 @@ export const About:React.FC = () => {
                     headerText="Break Time"
                     cardBody={
                         <>
-                            <p>Wow!  That was alot of text that you just read.  Take a break!  Look at my cats!</p>
+                            <p>
+                                Wow!  That was alot of text that you just read.  Take a break!
+                                Look at my cats! (Their names are Ivy and Zeus)
+                            </p>
                             <p>Go stretch, get some water, and relax!</p>
                         </>
                     }
@@ -72,8 +75,8 @@ export const About:React.FC = () => {
                             cardBody={
                                 <>
                                     <p>
-                                        For fun, I like to play games.  Videogame wise, I like to play on my switch and PC
-                                        But I also love playing board/card games with friends and family!
+                                        For fun, I play alot games.  Videogame wise, I like to play on my switch and PC.
+                                        And I also love playing board/card games with friends and family!
                                     </p>
                                     <p>
                                         I also enjoy cooking (although I still have alot to learn), and going to the gym.
