@@ -6,7 +6,8 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: white;
+    color: #222222;
+    background-color: #BBCDE5;
 }
 
 .header-item {
@@ -15,15 +16,22 @@
     background-color: transparent;
     border-radius: 0;
     border-width: 0 2px 0 2px;
-    border-color: lightgrey;
+    border-color: transparent;
     padding: 20px;
     margin: 0 10px 0 10px;
     font-size: medium;
     font-weight: bold;
 }
 
+.header-item:hover {
+    background-color: #639FAB;
+    border-color: transparent;
+}
+
 .header-item-selected {
     font-weight: bolder;
-    background-color: cornflowerblue;
-    border-color: black;
+    background-color: #1C5D99;
+    color: white;
+    border-color: #222222;
+    box-shadow: 0 0 5px #222222;
 }
