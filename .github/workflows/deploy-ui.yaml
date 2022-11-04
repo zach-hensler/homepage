@@ -13,4 +13,5 @@ jobs:
         with:
           node-version: '16'
       - run: npm install
+      - run: git config --global user.email zhensler12@gmail.com
       - run: npm run deploy
