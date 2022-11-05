@@ -12,11 +12,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: npm install
       - run: git config --global user.email zhensler12@gmail.com
       - run: git config --global user.name ${{ github.actor }}
+      - run: npm install
+      - run: yarn build
+      - run: yarn export
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./out
