@@ -16,7 +16,7 @@ jobs:
       - run: git config --global user.email zhensler12@gmail.com
       - run: git config --global user.name ${{ github.actor }}
       - name: deploy
-        uses: peaceiris/actions-gh-pages@v
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
