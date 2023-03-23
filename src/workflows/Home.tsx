@@ -13,7 +13,7 @@ export const Home:React.FC = () => {
                 imageSource={process.env.PUBLIC_URL+"/img/Ivy_and_Zeus.jpg"}
                 imageAltText="My Cats: Ivy and Zeus"
                 imageSide="left"
-                headerText="Zach Hensler :)"
+                headerText="Zach Hensler"
                 cardBody={
                     <div>
                         <p>
