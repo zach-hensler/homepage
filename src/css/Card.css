@@ -34,8 +34,13 @@
     background-color: white;
     border: solid #222222 2px;
     padding: 20px;
-    box-shadow: 20px 10px 10px lightgray;
+    box-shadow: 10px 5px 5px lightgray;
     width: 100%;
+}
+
+.card-container.selected {
+    border: solid #222222 5px;
+    box-shadow: 20px 10px 20px lightgray;
 }
 
 .card-container:hover {

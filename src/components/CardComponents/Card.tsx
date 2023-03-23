@@ -4,8 +4,9 @@ import "../../css/Card.css";
 
 export interface CardProps {
     cardHeader?: string
-    cardBody: JSX.Element|string,
-    buttonText?: string,
+    cardBody: JSX.Element|string
+    buttonText?: string
+    selected?: boolean
     onClick?: () => void
 }
 
@@ -13,6 +14,7 @@ export const Card:React.FC<CardProps> = ({
     cardHeader,
     cardBody,
     buttonText,
+    selected,
     onClick = () => undefined,
 }) => {
     const button = (buttonText && onClick)
@@ -28,7 +30,7 @@ export const Card:React.FC<CardProps> = ({
         : <></>;
 
     return (
-        <div className="card-container" onClick={onClick}>
+        <div className={`card-container ${selected ? "selected" : ""}`} onClick={onClick}>
             {header}
             {cardBody}
             {button}
