@@ -28,7 +28,9 @@ export const ImageCard:React.FC<ImageCardProps> = ({
         </div>
     );
 
-    const imageCardBody = imageSide === "left" ? <>{image}{bodyContent}</> : <>{bodyContent}{image}</>;
+    const imageCardBody = imageSide === "left"
+        ? <>{image}{bodyContent}</>
+        : <>{bodyContent}{image}</>;
 
     return (
         <div className="image-card-container">

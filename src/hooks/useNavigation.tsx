@@ -11,8 +11,6 @@ const NavigationContext = React.createContext<NavigationMethods>({
     updateCurrentRoute: () => {console.error("Initial Navigation Method not overridden...");},
 });
 export const NavigationProvider = ({ children }: { children: JSX.Element }) => {
-    const [currentRoute, setCurrentRoute] = useState<string>(Object.keys(routes)[0]);
-
     const validateRoute = (route: string) => {
         if (!routes?.[route]) {
             return false;
@@ -21,26 +19,19 @@ export const NavigationProvider = ({ children }: { children: JSX.Element }) => {
     };
 
     // using query params instead of slashes, because it plays nice with github's hosting
-    const updateInternalRouteToPath = () => {
+    const getQueryParamRoute = () => {
         const initialPath = window.location.href;
         const route = initialPath.split("?")[1];
     
-        if (!validateRoute(route)) {
-            setCurrentRoute("Home");
-            return;
-        }
+        if (!validateRoute(route)) return "Home";
         
-        setCurrentRoute(route);
+        return route;
     };
+    
+    const [currentRoute, setCurrentRoute] = useState<string>(getQueryParamRoute());
 
-    // set route when page initially loads (handles refreshes)
     useEffect(() => {
-        updateInternalRouteToPath();
-    }, []);
-
-    // handles back and forward presses in the browser
-    useEffect(() => {
-        addEventListener("popstate", updateInternalRouteToPath);
+        addEventListener("popstate", () => setCurrentRoute(getQueryParamRoute()));
     }, []);
 
     // exposed method for inter-application navigation
