@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card, CardRow, ImageCard } from "../components";
+import {Card, CardRow, IconLink, IconLinkWrapper, ImageCard} from "../components";
 
 export const About:React.FC = () => {
     return (
@@ -81,15 +81,27 @@ export const About:React.FC = () => {
                                         If you still want to know more about me, you can checkout out my profiles on these platforms!
                                         I&apos;m not super active on social media, but hopefully you can find what you&apos;re looking for.
                                     </p>
-                                    <ul style={{ textAlign: "left" }}>
-                                        <li><a href="https://github.com/zach-hensler" rel="noreferrer noopener" target="_blank">
-                                            Github
-                                        </a></li>
-                                        <li><a href="https://www.linkedin.com/in/zhensler/" rel="noreferrer noopener" target="_blank">
-                                            LinkedIn
-                                        </a></li>
-                                        <li>Resume</li>
-                                    </ul>
+                                    <IconLinkWrapper>
+                                        <IconLink
+                                            iconUrl={`${process.env.PUBLIC_URL}/img/github_logo.png`}
+                                            iconAltText=""
+                                            linkText="Github"
+                                            linkUrl="https://github.com/zach-hensler"
+                                        />
+                                        <IconLink
+                                            iconUrl={`${process.env.PUBLIC_URL}/img/linkedin_logo.webp`}
+                                            iconAltText=""
+                                            linkText="LinkedIn"
+                                            linkUrl="https://www.linkedin.com/in/zhensler/"
+                                        />
+                                        <IconLink
+                                            iconUrl={`${process.env.PUBLIC_URL}/img/pdf_icon.png`}
+                                            iconAltText=""
+                                            linkText="Resume"
+                                            linkUrl=""
+                                            onClick={() => window.open(`${process.env.PUBLIC_URL}/Resume_2023_08.pdf`, "_blank")}
+                                        />
+                                    </IconLinkWrapper>
                                 </>
                             }
                             key="about-me-external-links"

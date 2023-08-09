@@ -44,7 +44,7 @@
 }
 
 .card-container:hover {
-    background-color: #BBCDE5;
+    background-color: #ebecf8;
 }
 
 .card-container hr {
@@ -63,8 +63,7 @@
 }
 
 .image-card-container:hover {
-    background-color: #1C5D99;
-    color: white;
+    background-color: #ebecf8;
 }
 
 .card-image {

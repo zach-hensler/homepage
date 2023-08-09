@@ -1,0 +1,40 @@
+.icon-link-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon-link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 10px;
+    background-color: #a49aef;
+    color: black;
+    border-radius: 10px;
+}
+
+.icon-link-container:hover {
+    background-color: #6f67a1;
+    color: black;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+.icon-link-container > .icon {
+    max-width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
+
+.icon-link-container > .text {
+    margin: 0;
+    height: 20px;
+}
+
+.icon-link-container > .text > a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
