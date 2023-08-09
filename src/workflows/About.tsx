@@ -2,18 +2,6 @@ import React from "react";
 
 import { Card, CardRow, ImageCard } from "../components";
 
-{/* <ul>
-<li>I am a Purdue Graduate</li>
-<li>I am a front end develop proficient in React</li>
-<li>I am not a fan of css</li>
-<li><a href="https://github.com/zach-hensler" rel="noreferrer noopener" target="_blank">
-    Checkout my github
-</a></li>
-<li><a href="https://www.linkedin.com/in/zhensler/" rel="noreferrer noopener" target="_blank">
-    My LinkedIn
-</a></li>
-</ul> */}
-
 export const About:React.FC = () => {
     return (
         <div>
@@ -79,7 +67,7 @@ export const About:React.FC = () => {
                                         And I also love playing board/card games with friends and family!
                                     </p>
                                     <p>
-                                        I also enjoy cooking (although I still have alot to learn), and going to the gym.
+                                        I also enjoy cooking, drawing, and going to the gym.
                                     </p>
                                 </>
                             }
