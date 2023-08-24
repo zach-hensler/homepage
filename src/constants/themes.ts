@@ -10,12 +10,13 @@ export interface Theme {
     "--accent-font-color": string
 }
 
-export enum ThemeNames {
-    default = "default",
-    dark = "dark",
-}
+const ThemeNames = {
+    "default": "default",
+    "dark": "dark",
+} as const;
+export type ThemeNamesType = typeof ThemeNames[keyof typeof ThemeNames];
 
-export const themes: { [name in ThemeNames]: Theme } = {
+export const themes: Record<ThemeNamesType, Theme> = {
     default: {
         "--background-bg-color": "#f4fcfd",
         "--background-bg-darker": "#d8e6e8",

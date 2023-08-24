@@ -3,13 +3,13 @@ import React from "react";
 import {routes} from "../constants/routes";
 import "../css/Header.css";
 import {useNavigation} from "../hooks";
-import {Theme, ThemeNames} from "../constants/themes";
+import {Theme, ThemeNamesType} from "../constants/themes";
 import {ThemeSelector} from "./ThemeSelector";
 
 interface HeaderProps {
     selectedTheme: Theme
-    selectedThemeName: ThemeNames
-    setSelectedThemeName: (themeName: ThemeNames) => void
+    selectedThemeName: ThemeNamesType
+    setSelectedThemeName: (themeName: ThemeNamesType) => void
 }
 
 export const Header:React.FC<HeaderProps> = ({ selectedTheme, selectedThemeName, setSelectedThemeName }) => {
