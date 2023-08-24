@@ -10,60 +10,62 @@
     align-items: stretch;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 .card-row-child.two-cards {
     width: 40%;
     min-width: 300px;
-    margin: 10px 5% 5% 40px;
 }
 
 .card-row-child.three-cards {
     width: 25%;
     min-width: 300px;
-    margin: 10px 2.5% 2.5% 40px;
 }
 
 .card-row-child.four-cards {
     width: 15%;
     min-width: 300px;
-    margin: 10px 20px 20px 40px;
 }
 
 .card-container {
-    background-color: white;
-    border: solid #222222 2px;
+    color: var(--background-font-color);
+    background-color: var(--background-bg-color);
+    border: solid var(--accent-bg-color) 2px;
     padding: 20px;
-    box-shadow: 10px 5px 5px lightgray;
     width: 100%;
 }
 
 .card-container.selected {
-    border: solid #222222 5px;
-    box-shadow: 20px 10px 20px lightgray;
+    border: solid var(--accent-bg-color) 5px;
+    box-shadow: 2px 2px 5px var(--accent-bg-darker);
 }
 
 .card-container:hover {
-    background-color: #ebecf8;
+    background-color: var(--background-bg-darker);
+    border-color: var(--accent-bg-color);
+    box-shadow: 2px 2px 5px var(--accent-bg-color);
 }
 
 .card-container hr {
-    border-color: #1C5D99;
+    border-color: var(--accent-bg-color);
 }
 
 .image-card-container {
-    border: solid black 2px;
+    color: var(--background-font-color);
+    border: solid var(--accent-bg-color) 2px;
     padding: 20px;
-    box-shadow: 20px 10px 10px lightgray;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 40px;
-    background: white;
+    background: var(--background-bg-color);
 }
 
 .image-card-container:hover {
-    background-color: #ebecf8;
+    background-color: var(--background-bg-darker);
+    border-color: var(--accent-bg-color);
+    box-shadow: 2px 2px 5px var(--accent-bg-color);
 }
 
 .card-image {
@@ -80,7 +82,7 @@
 }
 
 .card-body-container hr {
-    border-color: #1C5D99;
+    border-color: var(--accent-bg-color);
 }
 
 .card-button-container {
@@ -92,18 +94,18 @@
 .card-button {
     cursor: pointer;
     width: 60%;
-    background-color: white;
+    background-color: var(--primary-bg-color);
     opacity: 50%;
     border-radius: 0;
     border-width: 2px;
-    border-color: lightgrey;
+    border-color: var(--primary-bg-darker);
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight: bold;
     font-size: large;
-    color: black;
+    color: var(--primary-font-color);
 }
 .card-button:hover {
-    background-color: blue;
-    color: white;
+    background-color: var(--primary-bg-darker);
+    color: var(--primary-font-color);
 }

@@ -12,15 +12,14 @@
     align-items: center;
 
     padding: 10px;
-    background-color: #a49aef;
-    color: black;
+    background-color: var(--accent-bg-color);
+    color: var(--accent-font-color);
     border-radius: 10px;
 }
 
 .icon-link-container:hover {
-    background-color: #6f67a1;
-    color: black;
-    box-shadow: 5px 5px 5px lightgray;
+    background-color: var(--accent-bg-darker);
+    box-shadow: 2px 2px 5px var(--accent-bg-darker);
 }
 
 .icon-link-container > .icon {

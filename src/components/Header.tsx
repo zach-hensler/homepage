@@ -1,10 +1,18 @@
 import React from "react";
 
-import { routes } from "../constants/routes";
+import {routes} from "../constants/routes";
 import "../css/Header.css";
-import { useNavigation } from "../hooks";
+import {useNavigation} from "../hooks";
+import {Theme, ThemeNames} from "../constants/themes";
+import {ThemeSelector} from "./ThemeSelector";
 
-export const Header:React.FC = () => {
+interface HeaderProps {
+    selectedTheme: Theme
+    selectedThemeName: ThemeNames
+    setSelectedThemeName: (themeName: ThemeNames) => void
+}
+
+export const Header:React.FC<HeaderProps> = ({ selectedTheme, selectedThemeName, setSelectedThemeName }) => {
     const { currentRoute, updateCurrentRoute } = useNavigation();
     const headerLinks = Object.keys(routes).map((path) => {
 
@@ -16,7 +24,10 @@ export const Header:React.FC = () => {
 
     return (
         <div className="header">
-            {headerLinks}
+            <div className="header-item-container">
+                {headerLinks}
+                <ThemeSelector selectedTheme={selectedTheme} selectedThemeName={selectedThemeName} setSelectedThemeName={setSelectedThemeName} />
+            </div>
         </div>
     );
 };

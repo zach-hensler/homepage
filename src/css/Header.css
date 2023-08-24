@@ -1,19 +1,23 @@
 .header {
     width: 100%;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--accent-bg-color);
     margin-bottom: 10px;
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    color: #222222;
-    background-color: #BBCDE5;
+    background-color: var(--background-bg-color);
+}
+
+.header-item-container {
+    display: flex;
 }
 
 .header-item {
     height: 100%;
     width: auto;
     background-color: transparent;
+    color: var(--background-font-color);
     border-radius: 0;
     border-width: 0 2px 0 2px;
     border-color: transparent;
@@ -23,15 +27,19 @@
     font-weight: bold;
 }
 
+.header-icon {
+    padding: 5px;
+    margin-left: auto;
+}
+
 .header-item:hover {
-    background-color: #639FAB;
+    background-color: var(--background-bg-darker);
     border-color: transparent;
 }
 
 .header-item-selected {
     font-weight: bolder;
-    background-color: #1C5D99;
-    color: white;
-    border-color: #222222;
-    box-shadow: 0 0 5px #222222;
+    background-color: var(--background-bg-darker);
+    color: var(--background-font-color);
+    box-shadow: 0 0 5px var(--background-bg-darker);
 }

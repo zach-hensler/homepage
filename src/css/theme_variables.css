@@ -1,0 +1,11 @@
+:root {
+    --background-bg-color: #f4fcfd;
+    --background-bg-darker: #d8e6e8;
+    --background-font-color: black;
+    --primary-bg-color: #5a7dc5;
+    --primary-bg-darker: #516ba1;
+    --primary-font-color: white;
+    --accent-bg-color: #625aa0;
+    --accent-bg-darker: #524c7f;
+    --accent-font-color: white;
+}

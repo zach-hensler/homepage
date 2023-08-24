@@ -1,13 +1,15 @@
 body {
-  background-color: #e2ebec;
+  min-height: 100vh;
 }
 
 .App {
+  color: var(--background-font-color);
+  background-color: var(--background-bg-color);
   text-align: center;
-  min-height: 95vh;
+  min-height: 100vh;
 }
 
-.workflow-container {
+.workflow-container, .header-item-container {
   width: 60%;
   min-width: 350px;
   margin: auto;
@@ -17,8 +19,8 @@ body {
   width: 100%;
   margin: 80px 0 0 0;
   padding: 20px 0;
-  border-top: solid black 2px;
-  background-color: aliceblue;
+  border-top: solid var(--accent-bg-color) 2px;
+  background-color: var(--background-bg-color);
 }
 
 .float-right {
@@ -26,7 +28,7 @@ body {
 }
 
 @media (max-width: 1700px) {
-  .workflow-container {
+  .workflow-container, .header-item-container {
     width: 80%;
   }
 }
