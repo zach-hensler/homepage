@@ -15,7 +15,7 @@ export const useTheme = () => {
     const {
         getLocalStorage: getSelectedThemeName,
         setLocalStorage: setSelectedThemeNameInStorage,
-    } = useLocalStorage<ThemeNames>("selectedTheme");
+    } = useLocalStorage<ThemeNames>("selectedTheme", ThemeNames.default);
 
     const [
         selectedTheme,

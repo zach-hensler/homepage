@@ -1,6 +1,6 @@
-export const useLocalStorage = <T>(identifier: string) => {
+export const useLocalStorage = <T>(identifier: string, defaultValue: T) => {
     const setLocalStorage = (state: T) => window.localStorage.setItem(identifier, JSON.stringify(state));
-    const getLocalStorage = () => JSON.parse(window.localStorage.getItem(identifier) || "{}") as T;
+    const getLocalStorage = () => JSON.parse(window.localStorage.getItem(identifier) || JSON.stringify(defaultValue)) as T;
 
     return { getLocalStorage, setLocalStorage };
 };
