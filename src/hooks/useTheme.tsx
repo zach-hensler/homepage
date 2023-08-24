@@ -27,5 +27,10 @@ export const useTheme = () => {
         setSelectedThemeNameInStorage(newSelectedTheme);
     };
 
-    return { selectedTheme, selectedThemeName: getSelectedThemeName(), setSelectedThemeName };
+    const toggleTheme = () => {
+        if (getSelectedThemeName() === "default") return setSelectedThemeName("dark");
+        setSelectedThemeName("default");
+    };
+
+    return { selectedTheme, toggleTheme };
 };

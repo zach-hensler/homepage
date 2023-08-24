@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
 }
 
-.workflow-container, .header-item-container {
+.workflow-container, .header-container, .header-container-mobile {
   width: 60%;
   min-width: 350px;
   margin: auto;
@@ -27,8 +27,12 @@ body {
   float: right;
 }
 
+.icon {
+  fill: var(--background-font-color);
+}
+
 @media (max-width: 1700px) {
-  .workflow-container, .header-item-container {
+  .workflow-container, .header-container, .header-container-mobile {
     width: 80%;
   }
 }
