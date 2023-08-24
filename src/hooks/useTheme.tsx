@@ -1,13 +1,13 @@
 import {useState} from "react";
 
-import {ThemeNames, themes} from "../constants/themes";
+import {ThemeNamesType, themes} from "../constants/themes";
 import {useLocalStorage} from "./useLocalStorage";
 
-const getThemeFromThemeName = (themeName: ThemeNames = ThemeNames.default) => {
+const getThemeFromThemeName = (themeName: ThemeNamesType = "default") => {
     if (Object.hasOwn(themes, themeName)) {
-        return themes[themeName as ThemeNames];
+        return themes[themeName as ThemeNamesType];
     } else {
-        return themes[ThemeNames.default];
+        return themes["default"];
     }
 };
 
@@ -15,14 +15,14 @@ export const useTheme = () => {
     const {
         getLocalStorage: getSelectedThemeName,
         setLocalStorage: setSelectedThemeNameInStorage,
-    } = useLocalStorage<ThemeNames>("selectedTheme", ThemeNames.default);
+    } = useLocalStorage<ThemeNamesType>("selectedTheme", "default");
 
     const [
         selectedTheme,
         setSelectedTheme,
     ] = useState(getThemeFromThemeName(getSelectedThemeName()));
 
-    const setSelectedThemeName = (newSelectedTheme: ThemeNames) => {
+    const setSelectedThemeName = (newSelectedTheme: ThemeNamesType) => {
         setSelectedTheme(getThemeFromThemeName(newSelectedTheme));
         setSelectedThemeNameInStorage(newSelectedTheme);
     };
