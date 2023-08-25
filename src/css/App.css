@@ -9,6 +9,10 @@ body {
   min-height: 100vh;
 }
 
+.workflow-container {
+  overflow: auto;
+}
+
 .workflow-container, .header-container, .header-container-mobile {
   width: 60%;
   min-width: 350px;
