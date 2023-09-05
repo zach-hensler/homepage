@@ -10,6 +10,23 @@ export const About:React.FC = () => {
                 <CardRow
                     Cards={[
                         <Card
+                            cardHeader="Work"
+                            cardBody={
+                                <>
+                                    <p>
+                                        I have been working full time as a front end developer since October 2020, using React, Typescript,
+                                        Github, and AWS Serverless Services.  I am also somewhat familiar with python,
+                                        C, and C#.
+                                    </p>
+                                    <p>
+                                        I am dedicated to continuously improving and developing new skills.  Recently,
+                                        I have been working on improving my UI/UX design abilities.
+                                    </p>
+                                </>
+                            }
+                            key="about-me-work-experience"
+                        />,
+                        <Card
                             cardHeader="Purdue"
                             cardBody={
                                 <>
@@ -26,18 +43,6 @@ export const About:React.FC = () => {
                                 </>
                             }
                             key="about-me-purdue-experience"
-                        />,
-                        <Card
-                            cardHeader="Work"
-                            cardBody={
-                                <>
-                                    <p>
-                                        I have been working full time as a front end developer since October 2020, using React, Typescript,
-                                        and occasionally Redux.
-                                    </p>
-                                </>
-                            }
-                            key="about-me-work-experience"
                         />,
                     ]}
                 />

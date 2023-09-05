@@ -18,8 +18,7 @@
 }
 
 .header-container-mobile.links {
-    display: flex;
-    flex-direction: column;
+    display: none;
 }
 
 .header-item {
@@ -64,6 +63,10 @@
     .header-container-mobile {
         display: none;
     }
+
+    .header-container-mobile.links {
+        display: none;
+    }
 }
 
 @media (max-width: 800px) {
@@ -73,5 +76,9 @@
 
     .header-container-mobile {
         display: flex;
+    }
+    .header-container-mobile.links {
+        display: flex;
+        flex-direction: column;
     }
 }
