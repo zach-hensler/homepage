@@ -2,10 +2,10 @@ import React from "react";
 
 import { ImageCard } from "../components";
 
-export const Technology = () => {
+export const Experience = () => {
     return (
         <div>
-            <h2>Technology Choices for this Project</h2>
+            <h2>Experience</h2>
             <ImageCard
                 imageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
                 imageAltText="React Logo"
