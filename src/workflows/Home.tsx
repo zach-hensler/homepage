@@ -62,7 +62,7 @@ export const Home:React.FC = () => {
                             </ul>
                         }
                         buttonText="Experience"
-                        onClick={() => updateCurrentRoute("Technology")}
+                        onClick={() => updateCurrentRoute("Experience")}
                     />,
                 ]}
             />
