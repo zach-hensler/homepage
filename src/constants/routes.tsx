@@ -1,8 +1,8 @@
 import React from "react";
-import { Home, About, Technology } from "../workflows";
+import { Home, About, Experience } from "../workflows";
 
 export const routes: Record<string, JSX.Element> = {
     Home: <Home />,
     About: <About />,
-    Technology: <Technology />,
+    Experience: <Experience />,
 };

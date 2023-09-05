@@ -50,7 +50,7 @@ export const Home:React.FC = () => {
                     />,
                     <Card
                         key="tech-experience-card"
-                        cardHeader="Technology Experience"
+                        cardHeader="Tech Experience"
                         cardBody={
                             <ul>
                                 <li><b>React</b> - I have been using React professionally since October 2020</li>
@@ -61,7 +61,7 @@ export const Home:React.FC = () => {
                                     although it isn&apos;t something that I use daily</li>
                             </ul>
                         }
-                        buttonText="Technology"
+                        buttonText="Experience"
                         onClick={() => updateCurrentRoute("Technology")}
                     />,
                 ]}
