@@ -32,13 +32,13 @@ export const About:React.FC = () => {
                                 <>
                                     <p>
                                         At Purdue, I studied computer engineering.  I was able to get experience with several languages
-                                        for my classes, including: C, C++, Java, Python, and Scheme.  The sheer variety of this experience
+                                        from my classes, including: C, Python, C++, Java, and Scheme.  This variety
                                         gives me a well rounded approach to problem solving in any language.
                                     </p>
                                     <p>
                                         I was also given the opportunity to work part time with the college of science while studying.
-                                        There I worked with professors to build their research pages, and setup the CMS for them to maintain
-                                        the content moving forward.
+                                        There I worked with professors to build their research pages, and setup a CMS
+                                        for them to add their own content.
                                     </p>
                                 </>
                             }
