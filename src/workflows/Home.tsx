@@ -34,28 +34,34 @@ export const Home:React.FC = () => {
                             <div style={{ textAlign: "left" }}>
                                 <p>I am a:</p>
                                 <ul>
-                                    <li>Purdue Graduate</li>
-                                    <li>Computer Engineering Major</li>
-                                    <li>React/Typescript Fan</li>
-                                    <li>Casual Cook</li>
-                                    <li>Enjoyer of Games</li>
+                                    <li>React and Typescript Developer</li>
+                                    <li>Computer Engineering Graduate from Purdue</li>
+                                </ul>
+                                <p>I like:</p>
+                                <ul>
+                                    <li>Cooking</li>
+                                    <li>Video/Card/Board Games</li>
+                                    <li>Drawing (Casually)</li>
                                 </ul>
                             </div>
                         }
-                        buttonText="Learn More"
+                        buttonText="About"
                         onClick={() => updateCurrentRoute("About")}
                     />,
                     <Card
                         key="tech-experience-card"
                         cardHeader="Technology Experience"
                         cardBody={
-                            <div>
-                                <p>React</p>
-                                <p>Typescript</p>
-                                <p>JS ES6</p>
-                            </div>
+                            <ul>
+                                <li><b>React</b> - I have been using React professionally since October 2020</li>
+                                <li><b>Typescript</b> - I have been using this professionally since June 2021</li>
+                                <li><b>Github</b> - I use Github on all my projects, both professional and personal.
+                                    And I engaged with it on a daily basis</li>
+                                <li><b>AWS Serverless</b> - I am familiar with serverless architecture under AWS,
+                                    although it isn&apos;t something that I use daily</li>
+                            </ul>
                         }
-                        buttonText="Learn More"
+                        buttonText="Technology"
                         onClick={() => updateCurrentRoute("Technology")}
                     />,
                 ]}

@@ -41,6 +41,8 @@ export const NavigationProvider = ({ children }: { children: JSX.Element }) => {
             return;
         }
 
+        // scroll not automatically fixed since we're using "?" routing
+        window.scrollTo(0,0);
         // update url and internal path
         window.history.pushState({}, newRoute, `/homepage?${newRoute}`);
         setCurrentRoute(newRoute);

@@ -8,41 +8,56 @@ export const Technology = () => {
             <h2>Technology Choices for this Project</h2>
             <ImageCard
                 imageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
-                imageAltText="React"
+                imageAltText="React Logo"
                 imageSide="left"
                 headerText="React"
                 cardBody={
                     <p>
-                        While React may be overkill for a simple page like this, I was still able to take
-                        advantage of it for this project.  React allows me to create reusable components, just
-                        like this card!  Encouraging code reuse and simplifying state management.
+                        All of my professional (and some of my personal) UI development experience has been in React.
+                        I am familiar with it&apos;s patterns, features, and common pitfalls.  It is useful for creating
+                        re-usable components (like this image card), and also helps with state management (either through
+                        redux, localized state hooks, or contexts).
                     </p>
                 }
             />
             <ImageCard
                 imageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png"
-                imageAltText="Typescript"
+                imageAltText="Typescript Logo"
                 imageSide="right"
                 headerText="Typescript"
                 cardBody={
                     <p>
                         After I tried Typescript back in June 2021, I couldn&apos;t go back.  While it takes a little
-                        extra typing every time you create a new component, it clears up so much confusion down the road.
-                        Making the initial investment worthwhile.
+                        extra typing every time you add a new feature, it clears up so much confusion down the road.
+                        Making the initial time investment worthwhile.
                     </p>
                 }
             />
             <ImageCard
-                imageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png?20170401104355"
-                imageAltText="Node JS"
+                imageSource="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                imageAltText="Github Logo"
                 imageSide="left"
-                headerText="Node Modules"
+                headerText="Github"
                 cardBody={
                     <p>
-                        I chose to use as FEW node modules as possible for this project, trying to
-                        build everything myself instead.  While in a commercial product, that&apos;s not
-                        going to always be the best choice.  Time equals money!  But in this case, I
-                        wanted the learning experience and to have full creative control over the project.
+                        Whether it&apos;s at work or for my personal projects, I use Github almost every day.  Version
+                        control makes working with a team possible, and it makes tracking down bugs easier by looking at
+                        the history.
+                    </p>
+                }
+            />
+            <ImageCard
+                addImageBackground
+                imageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png"
+                imageAltText="AWS Logo"
+                imageSide="right"
+                headerText="AWS Serverless"
+                cardBody={
+                    <p>
+                        I have experience working with <b>Lambda</b>, <b>S3</b>, and <b>DynamoDB</b> professionally.
+                        While I don&apos;t use it on my day to day life, I am familiar with the services, how they work,
+                        and how a serverless architecture fits together.  I have also dabbled in using <b>Quicksight</b>,
+                        <b> DataBrew</b>, and <b>S3</b> to build reporting features.
                     </p>
                 }
             />

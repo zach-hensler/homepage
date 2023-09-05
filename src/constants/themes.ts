@@ -36,7 +36,7 @@ export const themes: Record<ThemeNamesType, Theme> = {
         "--primary-bg-darker": "#5a7dc5",
         "--primary-font-color": "black",
         "--accent-bg-color": "#f199bf",
-        "--accent-bg-darker": "#f199bf",
+        "--accent-bg-darker": "#c77196",
         "--accent-font-color": "black",
     },
 };

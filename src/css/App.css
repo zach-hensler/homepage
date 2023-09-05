@@ -7,6 +7,7 @@ body {
   background-color: var(--background-bg-color);
   text-align: center;
   min-height: 100vh;
+  overflow: auto;
 }
 
 .workflow-container, .header-container, .header-container-mobile {

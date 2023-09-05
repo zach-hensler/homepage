@@ -4,6 +4,7 @@ import "../../css/App.css";
 import "../../css/Card.css";
 
 interface ImageCardProps {
+    addImageBackground?: boolean
     imageSource: string
     imageAltText: string
     imageSide: "left"|"right"
@@ -12,13 +13,18 @@ interface ImageCardProps {
 }
 
 export const ImageCard:React.FC<ImageCardProps> = ({
+    addImageBackground = false,
     imageSource,
     imageAltText,
     imageSide,
     headerText,
     cardBody,
 }) => {
-    const image = <img src={imageSource} alt={imageAltText} className="card-image" />;
+    const image = <img
+        src={imageSource}
+        alt={imageAltText}
+        className={`card-image ${addImageBackground ? "white" : ""}`}
+    />;
 
     const bodyContent = (
         <div className="card-body-container">

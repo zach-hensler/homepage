@@ -1,34 +1,22 @@
 .card-row{
     display: flex;
     align-items: stretch;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 -20px;
 }
 
 .card-row-child {
     display: flex;
+    flex: 999 0 40%;
     align-items: stretch;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 40px;
-}
-
-.card-row-child.two-cards {
-    width: 40%;
-    min-width: 300px;
-}
-
-.card-row-child.three-cards {
-    width: 25%;
-    min-width: 300px;
-}
-
-.card-row-child.four-cards {
-    width: 15%;
-    min-width: 300px;
+    min-width: 350px;
+    margin: 0 20px 40px 20px;
 }
 
 .card-container {
+    text-align: left;
     color: var(--background-font-color);
     background-color: var(--background-bg-color);
     border: solid var(--accent-bg-color) 2px;
@@ -44,7 +32,7 @@
 .card-container:hover {
     background-color: var(--background-bg-darker);
     border-color: var(--accent-bg-color);
-    box-shadow: 2px 2px 5px var(--accent-bg-color);
+    box-shadow: 2px 2px 5px var(--accent-bg-darker);
 }
 
 .card-container hr {
@@ -52,6 +40,7 @@
 }
 
 .image-card-container {
+    text-align: left;
     color: var(--background-font-color);
     border: solid var(--accent-bg-color) 2px;
     padding: 20px;
@@ -65,14 +54,20 @@
 .image-card-container:hover {
     background-color: var(--background-bg-darker);
     border-color: var(--accent-bg-color);
-    box-shadow: 2px 2px 5px var(--accent-bg-color);
+    box-shadow: 2px 2px 5px var(--accent-bg-darker);
 }
 
 .card-image {
-    max-width: 100%;
-    width: auto;
-    height: 300px;
-    padding: 0 20px;
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    margin: 0 20px;
+}
+
+.card-image.white {
+    border-radius: 5px;
+    padding: 30px;
+    background-color: white;
 }
 
 .card-body-container {
