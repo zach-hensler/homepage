@@ -1,6 +1,7 @@
 import React from "react";
 
 import {Card, CardRow, IconLink, IconLinkWrapper, ImageCard} from "../components";
+import {contactInfo} from "../constants/contactInfo";
 
 export const About:React.FC = () => {
     return (
@@ -15,12 +16,10 @@ export const About:React.FC = () => {
                                 <>
                                     <p>
                                         I have been working full time as a front end developer since October 2020, using React, Typescript,
-                                        Github, and AWS Serverless Services.  I am also somewhat familiar with python,
-                                        C, and C#.
+                                        Github, and AWS Serverless Services.  I am also somewhat familiar with C#, Python, and C.
                                     </p>
                                     <p>
-                                        I am dedicated to continuously improving and developing new skills.  Recently,
-                                        I have been working on improving my UI/UX design abilities.
+                                        I am dedicated to continuously learning new skills, and improving my existing ones.
                                     </p>
                                 </>
                             }
@@ -64,15 +63,12 @@ export const About:React.FC = () => {
                 <CardRow
                     Cards={[
                         <Card
-                            cardHeader="Fun!"
+                            cardHeader="Hobbies"
                             cardBody={
                                 <>
                                     <p>
-                                        For fun, I play alot games.  Videogame wise, I like to play on my switch and PC.
-                                        And I also love playing board/card games with friends and family!
-                                    </p>
-                                    <p>
-                                        I also enjoy cooking, drawing, and going to the gym.
+                                        For fun, I enjoy playing games, cooking, and making art!  If you&apos;re interested in my art, you can check out&nbsp;
+                                        <a href={contactInfo.galleryUrl} target="_blank" rel="noreferrer">my gallery website here</a>.
                                     </p>
                                 </>
                             }
@@ -85,26 +81,33 @@ export const About:React.FC = () => {
                                     <p>
                                         If you still want to know more about me, you can checkout out my profiles on these platforms!
                                         I&apos;m not super active on social media, but hopefully you can find what you&apos;re looking for.
+                                        Alternatively, you can reach out to me directly via email.
                                     </p>
                                     <IconLinkWrapper>
                                         <IconLink
                                             iconUrl={`${process.env.PUBLIC_URL}/img/github_logo.png`}
-                                            iconAltText=""
+                                            iconAltText="Github Icon"
                                             linkText="Github"
-                                            linkUrl="https://github.com/zach-hensler"
+                                            linkUrl={contactInfo.github}
                                         />
                                         <IconLink
                                             iconUrl={`${process.env.PUBLIC_URL}/img/linkedin_logo.webp`}
-                                            iconAltText=""
+                                            iconAltText="LinkedIn Icon"
                                             linkText="LinkedIn"
-                                            linkUrl="https://www.linkedin.com/in/zhensler/"
+                                            linkUrl={contactInfo.linkedInUrl}
                                         />
                                         <IconLink
                                             iconUrl={`${process.env.PUBLIC_URL}/img/pdf_icon.png`}
-                                            iconAltText=""
+                                            iconAltText="PDF Icon"
                                             linkText="Resume"
                                             linkUrl=""
                                             onClick={() => window.open(`${process.env.PUBLIC_URL}/Resume_2023_08.pdf`, "_blank")}
+                                        />
+                                        <IconLink
+                                            iconUrl={`${process.env.PUBLIC_URL}/img/gmail_icon.webp`}
+                                            iconAltText="Gmail Icon"
+                                            linkText="Email Me"
+                                            linkUrl={`mailto:${contactInfo.email}`}
                                         />
                                     </IconLinkWrapper>
                                 </>

@@ -2,6 +2,7 @@ import React from "react";
 
 import { Card, CardRow, ImageCard } from "../components";
 import { useNavigation } from "../hooks";
+import {contactInfo} from "../constants/contactInfo";
 
 export const Home:React.FC = () => {
     const { updateCurrentRoute } = useNavigation();
@@ -13,13 +14,17 @@ export const Home:React.FC = () => {
                 imageSource={`${process.env.PUBLIC_URL}/img/Ivy_and_Zeus.jpg`}
                 imageAltText="My Cats: Ivy and Zeus"
                 imageSide="left"
-                headerText="Zach Hensler"
+                headerText="Who Am I?"
                 cardBody={
                     <div>
                         <p>
-                            I have experience developing responsive React applications, that have to handle complex data/states.
-                            I worked on these applications with and without redux, teaching me the pros and cons of using it.
-                            I also have two adorable cats (Ivy and Zeus)!
+                            My name is Zach Hensler, I am a professional web developer/software engineer.  I consider myself
+                            to be a seasoned frontend developer, and a budding backend developer.  On this website, I hope to
+                            communicate to you: my experience, my hobbies, and a little bit of my personality as well!
+                        </p>
+                        <p>If you have any questions that I didn&apos;t cover here, feel free to reach out via email&nbsp;
+                            <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+                            &nbsp;or on LinkedIn at <a href={contactInfo.linkedInUrl}>{contactInfo.linkedInUser}</a>
                         </p>
                     </div>
                 }
@@ -34,34 +39,35 @@ export const Home:React.FC = () => {
                             <div style={{ textAlign: "left" }}>
                                 <p>I am a:</p>
                                 <ul>
-                                    <li>React and Typescript Developer</li>
-                                    <li>Computer Engineering Graduate from Purdue</li>
+                                    <li>Seasoned frontend developer, with experience using React, Typescript, and Jest.</li>
+                                    <li>Fledgling backend developer, learning C# and Python.</li>
+                                    <li>Computer Engineering Graduate from Purdue University.</li>
                                 </ul>
                                 <p>I like:</p>
                                 <ul>
                                     <li>Cooking</li>
                                     <li>Video/Card/Board Games</li>
-                                    <li>Drawing (Casually)</li>
+                                    <li>Drawing/Painting</li>
                                 </ul>
                             </div>
                         }
-                        buttonText="About"
+                        buttonText="Learn more about me"
                         onClick={() => updateCurrentRoute("About")}
                     />,
                     <Card
                         key="tech-experience-card"
-                        cardHeader="Tech Experience"
+                        cardHeader="Programming Language/Tooling Experience"
                         cardBody={
                             <ul>
-                                <li><b>React</b> - I have been using React professionally since October 2020</li>
-                                <li><b>Typescript</b> - I have been using this professionally since June 2021</li>
-                                <li><b>Github</b> - I use Github on all my projects, both professional and personal.
-                                    And I engaged with it on a daily basis</li>
-                                <li><b>AWS Serverless</b> - I am familiar with serverless architecture under AWS,
-                                    although it isn&apos;t something that I use daily</li>
+                                <li>React</li>
+                                <li>Typescript</li>
+                                <li>Github</li>
+                                <li>AWS Serverless</li>
+                                <li>C#</li>
+                                <li>Python</li>
                             </ul>
                         }
-                        buttonText="Experience"
+                        buttonText="Learn more about my experience"
                         onClick={() => updateCurrentRoute("Experience")}
                     />,
                 ]}

@@ -20,7 +20,7 @@ export const Card:React.FC<CardProps> = ({
     const button = (buttonText && onClick)
         ? (
             <div className="card-button-container">
-                <button className="card-button">{buttonText}</button>
+                <button className="card-button" onClick={onClick}>{buttonText}</button>
             </div>
         )
         : <></>;
@@ -30,7 +30,7 @@ export const Card:React.FC<CardProps> = ({
         : <></>;
 
     return (
-        <div className={`card-container ${selected ? "selected" : ""}`} onClick={onClick}>
+        <div className={`card-container ${selected ? "selected" : ""}`}>
             {header}
             {cardBody}
             {button}
