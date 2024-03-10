@@ -1,5 +1,3 @@
-import React from "react";
-
 import { ImageCard } from "../components";
 import {contactInfo} from "../constants/contactInfo";
 

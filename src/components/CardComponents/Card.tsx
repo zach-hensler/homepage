@@ -1,4 +1,4 @@
-import React from "react";
+import {FunctionalComponent, JSX} from "preact";
 
 import "../../css/Card.css";
 
@@ -10,7 +10,7 @@ export interface CardProps {
     onClick?: () => void
 }
 
-export const Card:React.FC<CardProps> = ({
+export const Card: FunctionalComponent<CardProps> = ({
     cardHeader,
     cardBody,
     buttonText,

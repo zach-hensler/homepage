@@ -1,10 +1,10 @@
-import React from "react";
+import {JSX, FunctionalComponent} from "preact";
 
 interface CardRowProps {
     Cards: JSX.Element[]
 }
 
-export const CardRow:React.FC<CardRowProps> = ({ Cards }) => {
+export const CardRow:FunctionalComponent<CardRowProps> = ({ Cards }) => {
     const cardChildren = Cards.map((card, idx) => (
         <div key={`card-row-item-${idx}`} className="card-row-child">
             {card}

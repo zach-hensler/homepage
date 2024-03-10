@@ -1,4 +1,5 @@
-import React from "react";
+import {JSX} from "preact";
+
 import { Home, About, Experience } from "../workflows";
 
 export const routes: Record<string, JSX.Element> = {

@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigation } from "../hooks";
 import { routes } from "../constants/routes";
 import "../css/App.css";

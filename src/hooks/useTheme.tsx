@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState} from "preact/hooks";
 
 import {ThemeNamesType, themes} from "../constants/themes";
 import {useLocalStorage} from "./useLocalStorage";

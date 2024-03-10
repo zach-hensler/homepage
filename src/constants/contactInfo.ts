@@ -5,5 +5,4 @@ export const contactInfo = {
     github: "https://github.com/zach-hensler",
     galleryUrl: "https://zach-hensler.github.io/gallery/",
     homepageSourcecode: "https://github.com/zach-hensler/homepage",
-    resume: "Resume_2024_03.pdf",
 } as const;

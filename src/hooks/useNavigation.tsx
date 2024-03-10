@@ -1,12 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "preact/hooks";
+import { createContext } from "preact";
 import { routes } from "../constants/routes";
+import {JSX} from "preact";
 
 interface NavigationMethods {
     currentRoute: string;
     updateCurrentRoute: (newRoute: string) => void
 }
 
-const NavigationContext = React.createContext<NavigationMethods>({
+const NavigationContext = createContext<NavigationMethods>({
     currentRoute: "Home",
     updateCurrentRoute: () => {console.error("Initial Navigation Method not overridden...");},
 });
