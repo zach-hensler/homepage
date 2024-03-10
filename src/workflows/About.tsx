@@ -101,7 +101,7 @@ export const About:React.FC = () => {
                                             iconAltText="PDF Icon"
                                             linkText="Resume"
                                             linkUrl=""
-                                            onClick={() => window.open(`${process.env.PUBLIC_URL}/Resume_2024_01.pdf`, "_blank")}
+                                            onClick={() => window.open(`${process.env.PUBLIC_URL}/${contactInfo.resume}`, "_blank")}
                                         />
                                         <IconLink
                                             iconUrl={`${process.env.PUBLIC_URL}/img/gmail_icon.webp`}
