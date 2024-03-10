@@ -1,4 +1,4 @@
-import React from "react";
+import {JSX, FunctionalComponent} from "preact";
 
 import "../../css/App.css";
 import "../../css/Card.css";
@@ -12,7 +12,7 @@ interface ImageCardProps {
     cardBody: string|JSX.Element
 }
 
-export const ImageCard:React.FC<ImageCardProps> = ({
+export const ImageCard:FunctionalComponent<ImageCardProps> = ({
     addImageBackground = false,
     imageSource,
     imageAltText,

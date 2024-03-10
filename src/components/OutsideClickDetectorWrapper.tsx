@@ -1,8 +1,9 @@
-import React, {useRef, useEffect, ReactElement, FC} from "react";
+import  {useRef, useEffect} from "preact/hooks";
+import {FunctionalComponent, ComponentChildren} from "preact";
 
 interface Props {
     handleClick: () => void
-    children: ReactElement | ReactElement[]
+    children: ComponentChildren
 }
 
 /**
@@ -11,7 +12,7 @@ interface Props {
  * @param children
  * @constructor
  */
-export const OutsideClickDetectorWrapper:FC<Props> = ({ handleClick, children }) => {
+export const OutsideClickDetectorWrapper:FunctionalComponent<Props> = ({ handleClick, children }) => {
     const wrapperRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {

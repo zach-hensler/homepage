@@ -1,17 +1,18 @@
-import React from "react";
+import { FunctionalComponent } from "preact";
 
+import IvyAndZeus from "../assets/Ivy_and_Zeus.jpg";
 import { Card, CardRow, ImageCard } from "../components";
 import { useNavigation } from "../hooks";
 import {contactInfo} from "../constants/contactInfo";
 
-export const Home:React.FC = () => {
+export const Home: FunctionalComponent = () => {
     const { updateCurrentRoute } = useNavigation();
 
     return (
         <div>
             <h2>Home</h2>
             <ImageCard
-                imageSource={`${process.env.PUBLIC_URL}/img/Ivy_and_Zeus.jpg`}
+                imageSource={IvyAndZeus}
                 imageAltText="My Cats: Ivy and Zeus"
                 imageSide="left"
                 headerText="Who Am I?"

@@ -1,7 +1,7 @@
-import React from "react";
 import {contactInfo} from "../constants/contactInfo";
+import {FunctionalComponent} from "preact";
 
-export const Projects: React.FC = () => {
+export const Projects: FunctionalComponent = () => {
     return (
         <div>
             <h2>Projects</h2>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "preact/hooks";
 
 import {routes} from "../constants/routes";
 import "../css/Header.css";
@@ -6,12 +6,13 @@ import {useNavigation} from "../hooks";
 import { menuOpenIcon, menuClosedIcon } from "../constants/icons";
 import {ThemeSelector} from "./ThemeSelector";
 import {OutsideClickDetectorWrapper} from "./OutsideClickDetectorWrapper";
+import {FunctionalComponent} from "preact";
 
 interface HeaderProps {
     toggleTheme: () => void
 }
 
-export const Header:React.FC<HeaderProps> = ({ toggleTheme }) => {
+export const Header:FunctionalComponent<HeaderProps> = ({ toggleTheme }) => {
     const [showMobileLinks, setShowMobileLinks] = useState<boolean>(false);
     const { currentRoute, updateCurrentRoute } = useNavigation();
 

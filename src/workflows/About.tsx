@@ -1,9 +1,15 @@
-import React from "react";
+import { FunctionalComponent } from "preact";
 
+import IvyAndZeus from "../assets/Ivy_and_Zeus.jpg";
+import GithubLogo from "../assets/github_logo.png";
+import LinkedInLogo from "../assets/linkedin_logo.webp";
+import PdfIcon from "../assets/pdf_icon.png";
+import GmailIcon from "../assets/gmail_icon.webp";
+import Resume from "../assets/Resume_2024_03.pdf";
 import {Card, CardRow, IconLink, IconLinkWrapper, ImageCard} from "../components";
 import {contactInfo} from "../constants/contactInfo";
 
-export const About:React.FC = () => {
+export const About:FunctionalComponent = () => {
     return (
         <div>
             <h2>About Me</h2>
@@ -46,7 +52,7 @@ export const About:React.FC = () => {
                     ]}
                 />
                 <ImageCard
-                    imageSource={process.env.PUBLIC_URL+"/img/Ivy_and_Zeus.jpg"}
+                    imageSource={IvyAndZeus}
                     imageSide="left"
                     imageAltText="Picture of my cats"
                     headerText="Break Time"
@@ -85,26 +91,26 @@ export const About:React.FC = () => {
                                     </p>
                                     <IconLinkWrapper>
                                         <IconLink
-                                            iconUrl={`${process.env.PUBLIC_URL}/img/github_logo.png`}
+                                            iconSource={GithubLogo}
                                             iconAltText="Github Icon"
                                             linkText="Github"
                                             linkUrl={contactInfo.github}
                                         />
                                         <IconLink
-                                            iconUrl={`${process.env.PUBLIC_URL}/img/linkedin_logo.webp`}
+                                            iconSource={LinkedInLogo}
                                             iconAltText="LinkedIn Icon"
                                             linkText="LinkedIn"
                                             linkUrl={contactInfo.linkedInUrl}
                                         />
                                         <IconLink
-                                            iconUrl={`${process.env.PUBLIC_URL}/img/pdf_icon.png`}
+                                            iconSource={PdfIcon}
                                             iconAltText="PDF Icon"
                                             linkText="Resume"
                                             linkUrl=""
-                                            onClick={() => window.open(`${process.env.PUBLIC_URL}/${contactInfo.resume}`, "_blank")}
+                                            onClick={() => window.open(Resume, "_blank")}
                                         />
                                         <IconLink
-                                            iconUrl={`${process.env.PUBLIC_URL}/img/gmail_icon.webp`}
+                                            iconSource={GmailIcon}
                                             iconAltText="Gmail Icon"
                                             linkText="Email Me"
                                             linkUrl={`mailto:${contactInfo.email}`}

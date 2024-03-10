@@ -1,9 +1,10 @@
-import React from "react";
+import {FunctionalComponent} from "preact";
 
 import "../css/App.css";
 import {contactInfo} from "../constants/contactInfo";
 
-export const Footer:React.FC = () => {
+
+export const Footer:FunctionalComponent = () => {
     return (
         <div className="footer">
             Links I guess?
