@@ -26,13 +26,13 @@ export const Card: FunctionalComponent<CardProps> = ({
         : <></>;
 
     const header = cardHeader
-        ? <><h3>{cardHeader}</h3><hr /></>
+        ? <><h3>{cardHeader}</h3><hr style={{ width: '100%' }}/></>
         : <></>;
 
     return (
         <div className={`card-container ${selected ? "selected" : ""}`}>
             {header}
-            {cardBody}
+            <div className="card-body">{cardBody}</div>
             {button}
         </div>
     );

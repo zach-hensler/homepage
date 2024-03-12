@@ -6,17 +6,18 @@ interface ChildProps {
     iconAltText: string
     linkText: string
     linkUrl: string
+    usePrimaryColor?: boolean
     onClick?: () => void
 }
 
 export const IconLink: FunctionalComponent<ChildProps> =
-    ({iconSource, iconAltText, linkText, linkUrl, onClick}) => {
+    ({iconSource, iconAltText, linkText, linkUrl, usePrimaryColor, onClick}) => {
     const renderLink = linkUrl
         ? <a href={linkUrl} rel="noreferrer noopener" target="_blank">{linkText}</a>
         : <a href="" >{linkText}</a>;
 
     return (
-        <div className="icon-link-container">
+        <div className={"icon-link-container" + (usePrimaryColor ? " primary" : "")}>
             <img className="icon" src={iconSource} alt={iconAltText} />
             <p className="text" onClick={onClick}>{renderLink}</p>
         </div>
