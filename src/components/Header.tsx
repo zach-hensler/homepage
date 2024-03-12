@@ -23,21 +23,21 @@ export const Header:FunctionalComponent<HeaderProps> = ({ toggleTheme }) => {
         };
         const classes = `header-item ${currentRoute === path ? "header-item-selected" : ""}`;
         return (
-            <button className={classes} onClick={onLinkClick} key={path}>{path}</button>
+            <button class={classes} onClick={onLinkClick} key={path}>{path}</button>
         );
     });
 
     return (
         <OutsideClickDetectorWrapper handleClick={() => setShowMobileLinks(false)}>
-            <div className="header">
-                <div className="header-container-mobile">
-                    <button className="header-item header-icon" onClick={() => setShowMobileLinks(!showMobileLinks)}>
+            <div class="header">
+                <div class="header-container-mobile">
+                    <button class="header-item header-icon" onClick={() => setShowMobileLinks(!showMobileLinks)}>
                         {showMobileLinks ? menuOpenIcon : menuClosedIcon}
                     </button>
                     <ThemeSelector toggleTheme={toggleTheme} />
                 </div>
-                {showMobileLinks ? <div className="header-container-mobile links">{headerLinks}</div> : <></>}
-                <div className="header-container">
+                {showMobileLinks ? <div class="header-container-mobile links">{headerLinks}</div> : <></>}
+                <div class="header-container">
                     {headerLinks}
                     <ThemeSelector toggleTheme={toggleTheme} />
                 </div>

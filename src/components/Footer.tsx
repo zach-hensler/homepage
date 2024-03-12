@@ -6,7 +6,7 @@ import {contactInfo} from "../constants/contactInfo";
 
 export const Footer:FunctionalComponent = () => {
     return (
-        <div className="footer">
+        <div class="footer">
             Links I guess?
             <div><a href={contactInfo.github} rel="noreferrer noopener" target="_blank">
                 Github

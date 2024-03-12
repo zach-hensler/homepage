@@ -6,5 +6,5 @@ interface ThemeSelectorProps {
 }
 
 export const ThemeSelector: FunctionalComponent<ThemeSelectorProps> = ({ toggleTheme }) => {
-    return <button className="header-item header-icon float" onClick={toggleTheme}>{paletteIcon}</button>;
+    return <button class="header-item header-icon float" onClick={toggleTheme}>{paletteIcon}</button>;
 };

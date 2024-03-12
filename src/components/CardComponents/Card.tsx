@@ -19,20 +19,20 @@ export const Card: FunctionalComponent<CardProps> = ({
 }) => {
     const button = (buttonText && onClick)
         ? (
-            <div className="card-button-container">
-                <button className="card-button" onClick={onClick}>{buttonText}</button>
+            <div class="card-button-container">
+                <button class="card-button" onClick={onClick}>{buttonText}</button>
             </div>
         )
         : <></>;
 
     const header = cardHeader
-        ? <><h3>{cardHeader}</h3><hr style={{ width: '100%' }}/></>
+        ? <><h3>{cardHeader}</h3><hr class="card-divider"/></>
         : <></>;
 
     return (
-        <div className={`card-container ${selected ? "selected" : ""}`}>
+        <div class={`card-container ${selected ? "selected" : ""}`}>
             {header}
-            <div className="card-body">{cardBody}</div>
+            <div class="card-body">{cardBody}</div>
             {button}
         </div>
     );

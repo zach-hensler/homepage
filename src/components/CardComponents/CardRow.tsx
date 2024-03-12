@@ -6,13 +6,13 @@ interface CardRowProps {
 
 export const CardRow:FunctionalComponent<CardRowProps> = ({ Cards }) => {
     const cardChildren = Cards.map((card, idx) => (
-        <div key={`card-row-item-${idx}`} className="card-row-child">
+        <div key={`card-row-item-${idx}`} class="card-row-child">
             {card}
         </div>
     ));
 
     return (
-        <div className="card-row">
+        <div class="card-row">
             {cardChildren}
         </div>
     );
