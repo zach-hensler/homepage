@@ -6,5 +6,5 @@ export const WorkflowRenderer = () => {
     const { currentRoute } = useNavigation();
 
     const className = "workflow-container";
-    return <div className={className}>{routes[currentRoute]}</div>;
+    return <div class={className}>{routes[currentRoute]}</div>;
 };

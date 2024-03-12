@@ -18,9 +18,19 @@
     border-radius: 10px;
 }
 
+.icon-link-container.primary {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-font-color);
+}
+
 .icon-link-container:hover {
     background-color: var(--accent-bg-darker);
     box-shadow: 2px 2px 5px var(--accent-bg-darker);
+}
+
+.icon-link-container:hover.primary {
+    background-color: var(--primary-bg-darker);
+    box-shadow: 2px 2px 5px var(--primary-bg-darker);
 }
 
 .icon-link-container > .icon {

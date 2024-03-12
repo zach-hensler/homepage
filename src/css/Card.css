@@ -16,6 +16,8 @@
 }
 
 .card-container {
+    display: flex;
+    flex-direction: column;
     text-align: left;
     color: var(--background-font-color);
     background-color: var(--background-bg-color);
@@ -78,6 +80,14 @@
 
 .card-body-container hr {
     border-color: var(--accent-bg-color);
+}
+
+.card-body {
+    flex-grow: 2;
+}
+
+.card-divider {
+    width: 100%;
 }
 
 .card-button-container {

@@ -23,11 +23,11 @@ export const ImageCard:FunctionalComponent<ImageCardProps> = ({
     const image = <img
         src={imageSource}
         alt={imageAltText}
-        className={`card-image ${addImageBackground ? "white" : ""}`}
+        class={`card-image ${addImageBackground ? "white" : ""}`}
     />;
 
     const bodyContent = (
-        <div className="card-body-container">
+        <div class="card-body-container">
             <h3>{headerText}</h3>
             <hr />
             {cardBody}
@@ -39,7 +39,7 @@ export const ImageCard:FunctionalComponent<ImageCardProps> = ({
         : <>{bodyContent}{image}</>;
 
     return (
-        <div className="image-card-container">
+        <div class="image-card-container">
             {imageCardBody}
         </div>
     );

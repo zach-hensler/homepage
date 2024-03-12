@@ -6,7 +6,7 @@ const App = () => {
     const { selectedTheme, toggleTheme } = useTheme();
 
     return (
-        <div className="App" style={{ ...selectedTheme }}>
+        <div class="App" style={{ ...selectedTheme }}>
             <Header toggleTheme={toggleTheme} />
             <WorkflowRenderer />
         </div>
