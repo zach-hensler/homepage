@@ -10,4 +10,4 @@ const Main = () => (
     </NavigationProvider>
 );
 
-render(<Main />, document.getElementById("app")!,);
+render(<Main />, document.getElementById("app")!);

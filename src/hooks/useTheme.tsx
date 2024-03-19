@@ -1,4 +1,4 @@
-import {useState} from "preact/hooks";
+import {useEffect, useState} from "preact/hooks";
 
 import {ThemeNamesType, themes} from "../constants/themes";
 import {useLocalStorage} from "./useLocalStorage";
@@ -31,6 +31,12 @@ export const useTheme = () => {
         if (getSelectedThemeName() === "default") return setSelectedThemeName("dark");
         setSelectedThemeName("default");
     };
+
+    useEffect(() => {
+        const body = document.getElementsByTagName("body")[0];
+        body.style.backgroundColor = selectedTheme["--background-bg-color"];
+        body.style.color = selectedTheme["--background-font-color"];
+    }, [selectedTheme])
 
     return { selectedTheme, toggleTheme };
 };
