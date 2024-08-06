@@ -5,7 +5,7 @@ import GithubLogo from "../assets/github_logo.png";
 import LinkedInLogo from "../assets/linkedin_logo.webp";
 import PdfIcon from "../assets/pdf_icon.png";
 import GmailIcon from "../assets/gmail_icon.webp";
-import Resume from "../assets/Resume_2024_07.pdf";
+import Resume from "../assets/resume_2024_08_05.pdf";
 import {Card, CardRow, IconLink, IconLinkWrapper, ImageCard} from "../components";
 import {contactInfo} from "../constants/contactInfo";
 
