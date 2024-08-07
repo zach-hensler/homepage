@@ -10,6 +10,7 @@ interface ImageCardProps {
     imageSide: "left"|"right"
     headerText: string
     cardBody: string|JSX.Element
+    maxImageWidth?: number
 }
 
 export const ImageCard:FunctionalComponent<ImageCardProps> = ({
@@ -19,20 +20,22 @@ export const ImageCard:FunctionalComponent<ImageCardProps> = ({
     imageSide,
     headerText,
     cardBody,
+    maxImageWidth = 300
 }) => {
-    const image = <img
-        src={imageSource}
-        alt={imageAltText}
-        class={`card-image ${addImageBackground ? "white" : ""}`}
-    />;
+    const image =
+        <img
+            src={imageSource}
+            alt={imageAltText}
+            class={`card-image ${addImageBackground ? "white" : ""}`}
+            style={{ maxWidth: `${maxImageWidth}px`, maxHeight: `${maxImageWidth}px` }}
+        />;
 
-    const bodyContent = (
+    const bodyContent =
         <div class="card-body-container">
             <h3>{headerText}</h3>
             <hr />
             {cardBody}
-        </div>
-    );
+        </div>;
 
     const imageCardBody = imageSide === "left"
         ? <>{image}{bodyContent}</>
