@@ -30,7 +30,7 @@ export const themes: Record<ThemeNamesType, Theme> = {
     },
     dark: {
         "--background-bg-color": "#21212d",
-        "--background-bg-darker": "#000",
+        "--background-bg-darker": "#130d22",
         "--background-font-color": "white",
         "--primary-bg-color": "#8fb3ff",
         "--primary-bg-darker": "#5a7dc5",

@@ -1,11 +1,26 @@
 import { ImageCard } from "../components";
 import {contactInfo} from "../constants/contactInfo";
+import dotnet_logo from "../assets/dotnet_logo.png";
 
-export const Experience = () => {
+export const Technical = () => {
     return (
         <div>
             <h2>Experience</h2>
             <ImageCard
+                maxImageWidth={150}
+                imageSource={dotnet_logo}
+                imageAltText="Dotnet Logo"
+                imageSide="left"
+                headerText="C# / F#"
+                cardBody={
+                    <p>
+                        I have been using both C# and F# to update existing RESTful APIs, and to create plugins for handling
+                        business logic.
+                    </p>
+                }
+            />
+            <ImageCard
+                maxImageWidth={150}
                 imageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
                 imageAltText="React Logo"
                 imageSide="left"
@@ -19,6 +34,7 @@ export const Experience = () => {
                 }
             />
             <ImageCard
+                maxImageWidth={150}
                 imageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png"
                 imageAltText="Typescript Logo"
                 imageSide="left"
@@ -31,6 +47,7 @@ export const Experience = () => {
                 }
             />
             <ImageCard
+                maxImageWidth={150}
                 imageSource="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
                 imageAltText="Github Logo"
                 imageSide="left"
@@ -47,6 +64,7 @@ export const Experience = () => {
                 }
             />
             <ImageCard
+                maxImageWidth={150}
                 addImageBackground
                 imageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png"
                 imageAltText="AWS Logo"
@@ -62,19 +80,7 @@ export const Experience = () => {
                 }
             />
             <ImageCard
-                imageSource="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg"
-                imageAltText="C# Logo"
-                imageSide="left"
-                headerText="C#"
-                cardBody={
-                    <p>
-                        I first dabbled in C# back in 2021.  And have been using it off an on since then.  But I really started
-                        to dig my heels in January 2024.  I&apos;m beginning to feel quite comfortable with the language,
-                        and making sure that all of my code is testable with XUnit.
-                    </p>
-                }
-            />
-            <ImageCard
+                maxImageWidth={150}
                 imageSource="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
                 imageAltText="Python Logo"
                 imageSide="left"
