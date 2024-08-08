@@ -4,7 +4,6 @@ import IvyAndZeus from "../assets/Ivy_and_Zeus.jpg";
 import { Card, CardRow, ImageCard } from "../components";
 import { useNavigation } from "../hooks";
 import {contactInfo} from "../constants/contactInfo";
-import Resume from "../assets/resume_2024_08_05.pdf";
 
 export const Home: FunctionalComponent = () => {
     const { updateCurrentRoute } = useNavigation();
@@ -25,7 +24,7 @@ export const Home: FunctionalComponent = () => {
                         </p>
                         <p>If you have any questions that I don&apos;t cover here, feel free to:
                             <ul>
-                                <li>check out my <a href="#" onClick={() => window.open(Resume, "_blank")}>resume</a></li>
+                                <li>check out my <a href="#" onClick={() => window.open(contactInfo.resume, "_blank")}>resume</a></li>
                                 <li>reach out via email <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></li>
                                 <li>find me on LinkedIn at <a
                                     href={contactInfo.linkedInUrl}>{contactInfo.linkedInUser}</a></li>
