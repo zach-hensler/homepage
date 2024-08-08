@@ -1,3 +1,5 @@
+import Resume from '../assets/resume_2024_08_08.pdf';
+
 const hostedUrl = "https://zach-hensler.github.io/";
 const sourceCodeUrl = "https://github.com/zach-hensler/";
 
@@ -12,4 +14,5 @@ export const contactInfo = {
     gallerySource: sourceCodeUrl + "gallery/",
     homepageUrl: hostedUrl + "homepage/",
     homepageSourcecode: sourceCodeUrl + "homepage/",
+    resume: Resume
 } as const;
