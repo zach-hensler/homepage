@@ -5,7 +5,7 @@ import preact from '@preact/preset-vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [preact()],
-  base: 'https://zach-hensler.github.io/homepage',
+  base: 'https://zach-hensler.com/',
   root: './',
   build: {
     outDir: 'build',
