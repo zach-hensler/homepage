@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "preact/hooks";
 import { createContext } from "preact";
 import { routes } from "../constants/routes";
 import {JSX} from "preact";
+import {safeWindow} from "../utils.ts";
 
 interface NavigationMethods {
     currentRoute: string;
@@ -12,6 +13,7 @@ const NavigationContext = createContext<NavigationMethods>({
     currentRoute: "Home",
     updateCurrentRoute: () => {console.error("Initial Navigation Method not overridden...");},
 });
+
 export const NavigationProvider = ({ children }: { children: JSX.Element }) => {
     const validateRoute = (route: string) => {
         if (!routes?.[route]) {
@@ -22,10 +24,13 @@ export const NavigationProvider = ({ children }: { children: JSX.Element }) => {
 
     // using query params instead of slashes, because it plays nice with github's hosting
     const getQueryParamRoute = () => {
+        const defaultRoute = "Home";
+        if (!safeWindow) return defaultRoute;
+
         const initialPath = window.location.href;
         const route = initialPath.split("?")[1];
     
-        if (!validateRoute(route)) return "Home";
+        if (!validateRoute(route)) return defaultRoute;
         
         return route;
     };
@@ -38,6 +43,8 @@ export const NavigationProvider = ({ children }: { children: JSX.Element }) => {
 
     // exposed method for inter-application navigation
     const updateCurrentRoute = (newRoute: string) => {
+        if (!safeWindow) return;
+
         if (!validateRoute(newRoute)) {
             console.error(`Attempted to navigate to invalid route: ${newRoute}`);
             return;
