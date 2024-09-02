@@ -6,7 +6,7 @@ import preact from '@preact/preset-vite'
 export default defineConfig({
   plugins: [
       preact({
-        prerender: { enabled: true }
+        prerender: { enabled: false }
       })
   ],
   base: 'https://zach-hensler.com/',
