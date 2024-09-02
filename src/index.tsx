@@ -1,4 +1,4 @@
-import { render } from "preact";
+import {hydrate, prerender as ssr} from "preact-iso";
 
 import "./index.css";
 import App from "./App";
@@ -10,4 +10,15 @@ const Main = () => (
     </NavigationProvider>
 );
 
-render(<Main />, document.getElementById("app")!);
+if (typeof window !== 'undefined') {
+    hydrate(<Main />, document.getElementById('app')!);
+}
+
+export async function prerender() {
+    const { html, links } = await ssr(<Main />);
+    return {
+        html,
+        links,
+        head: { lang: 'en' },
+    };
+}

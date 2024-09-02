@@ -4,7 +4,11 @@ import preact from '@preact/preset-vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [preact()],
+  plugins: [
+      preact({
+        prerender: { enabled: true }
+      })
+  ],
   base: 'https://zach-hensler.com/',
   root: './',
   build: {

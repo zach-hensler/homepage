@@ -1,8 +1,8 @@
 {
-  "name": "homepage",
+  "name": "",
   "private": true,
   "homepage": "https://zach-hensler.com/",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "gh-pages": "^6.1.1",
-    "preact": "^10.23.2"
+    "preact": "^10.23.2",
+    "preact-iso": "^2.6.3",
+    "preact-render-to-string": "^6.5.10"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.9.0",

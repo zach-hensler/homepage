@@ -7,6 +7,7 @@ import PdfIcon from "../assets/pdf_icon.png";
 import GmailIcon from "../assets/gmail_icon.webp";
 import {Card, CardRow, IconLink, IconLinkWrapper, ImageCard} from "../components";
 import {contactInfo} from "../constants/contactInfo";
+import {safeWindow} from "../utils.ts";
 
 export const About:FunctionalComponent = () => {
     return (
@@ -106,7 +107,7 @@ export const About:FunctionalComponent = () => {
                                             iconAltText="PDF Icon"
                                             linkText="Resume"
                                             linkUrl=""
-                                            onClick={() => window.open(contactInfo.resume, "_blank")}
+                                            onClick={() => safeWindow?.open?.(contactInfo.resume, "_blank")}
                                         />
                                         <IconLink
                                             iconSource={GmailIcon}
