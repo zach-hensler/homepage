@@ -15,11 +15,11 @@ jobs:
       - run: git config --global user.email zhensler12@gmail.com
       - run: git config --global user.name ${{ github.actor }}
       - run: npm install
-      - name: build
+      - name: Build
         run: |
           npm run build
-          echo \"zach-hensler.com\" > build/CNAME
-      - name: deploy
+          echo \"zach-hensler.com\" > ./build/CNAME
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
