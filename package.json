@@ -1,12 +1,13 @@
 {
-  "name": "",
+  "name": "Homepage",
   "private": true,
   "homepage": "https://zach-hensler.com/",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "createCNAME": "echo zach-hensler.com > ./build/CNAME",
+    "build": "tsc && vite build && npm run createCNAME",
     "preview": "vite preview",
     "deploy": "gh-pages -d build"
   },
