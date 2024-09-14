@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Zach Hensler" />
+    <meta
+            name="description"
+            content="About Zach Hensler.
+A fullstack web developer with over four years of industry experience.
+Specializing in React, Typescript, C#, and F#."
+    />
     <title>Zach Hensler</title>
   </head>
   <body>
-  <div id="app"></div>
-    <script prerender type="module" src="/src/index.tsx"></script>
+  <div id="app">
+    <script type="module" src="/src/index.tsx"></script>
+    <div id="prerender">
+      <script prerender type="module" src="/src/prerender.tsx"></script>
+    </div>
+  </div>
   </body>
 </html>
