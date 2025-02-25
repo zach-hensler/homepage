@@ -47,7 +47,7 @@ export const Home: FunctionalComponent = () => {
                                 <li>React</li>
                                 <li>Typescript</li>
                                 <li>HTML/CSS</li>
-                                <li>Github</li>
+                                <li>GIT</li>
                                 <li>AWS</li>
                                 <li>Python</li>
                             </ul>

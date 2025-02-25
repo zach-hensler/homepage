@@ -28,7 +28,7 @@ export const Technical = () => {
                 cardBody={
                     <p>
                         I have been using React professionally since 2020.  Building maintainable, readable, and testable
-                        large scale applications with it has been my focus since then.  I am quite familiar with it&apos;s
+                        applications with it has been my focus since then.  I am quite familiar with it&apos;s
                         strengths, weaknesses, and quirks.
                     </p>
                 }
@@ -59,7 +59,7 @@ export const Technical = () => {
                             by no means a Github Wizard, I am familiar with branching strategies, creating pull requests, handling merge conflicts,
                             and using it to manage multiple environments.
                         </p>
-                        <p>You can check out my source code for this website (and my other projects) on <a href={contactInfo.github} rel="noreferrer noopener" target="_blank">my github: {contactInfo.github}</a></p>
+                        <p>You can check out my source code for this website (and my other projects) at my github: <a href={contactInfo.github} rel="noreferrer noopener" target="_blank">{contactInfo.github}</a></p>
                     </>
                 }
             />
@@ -88,7 +88,7 @@ export const Technical = () => {
                 cardBody={
                     <p>
                         I started using Python for my classes in college (2016 - 2020), and have since used it professionally
-                        as a part of the backend for our web application.
+                        as a part of the backend for one of our web applications.
                     </p>
                 }
             />

@@ -1,11 +1,10 @@
 import { FunctionalComponent } from "preact";
 
-import IvyAndZeus from "../assets/Ivy_and_Zeus.jpg";
 import GithubLogo from "../assets/github_logo.png";
 import LinkedInLogo from "../assets/linkedin_logo.webp";
 import PdfIcon from "../assets/pdf_icon.png";
 import GmailIcon from "../assets/gmail_icon.webp";
-import {Card, CardRow, IconLink, IconLinkWrapper, ImageCard} from "../components";
+import {Card, CardRow, IconLink, IconLinkWrapper} from "../components";
 import {contactInfo} from "../constants/contactInfo";
 import {safeWindow} from "../utils.ts";
 
@@ -17,12 +16,12 @@ export const About:FunctionalComponent = () => {
                 <CardRow
                     Cards={[
                         <Card
-                            cardHeader="Work"
+                            cardHeader="Career"
                             cardBody={
                                 <>
                                     <p>
-                                        I have been working full time as a front end developer since October 2020, using React, Typescript,
-                                        Github, and AWS Serverless Services.  I am also somewhat familiar with C#, Python, and C.
+                                        I have been working full time as a web developer since October 2020.
+                                        Working with React, Typescript, C#, and F# in AWS Serverless and on-premise environments.
                                     </p>
                                     <p>
                                         I am dedicated to continuously learning new skills, and improving my existing ones.
@@ -32,39 +31,19 @@ export const About:FunctionalComponent = () => {
                             key="about-me-work-experience"
                         />,
                         <Card
-                            cardHeader="Purdue"
+                            cardHeader="Education (Purdue University)"
                             cardBody={
                                 <>
-                                    <p>
-                                        At Purdue, I studied computer engineering.  I was able to get experience with several languages
-                                        from my classes, including: C, Python, C++, Java, and Scheme.  This variety
-                                        gives me a well rounded approach to problem solving in any language.
-                                    </p>
-                                    <p>
-                                        I was also given the opportunity to work part time with the college of science while studying.
-                                        There I worked with professors to build their research pages, and setup a CMS
-                                        for them to add their own content.
-                                    </p>
+                                    <ul>
+                                        <li>Bachelor's Degree in Computer Engineering</li>
+                                        <li>In my classes, I used: C, Python, C++, Java, and Scheme</li>
+                                        <li>I worked part time developing websites for the College of Science</li>
+                                    </ul>
                                 </>
                             }
                             key="about-me-purdue-experience"
                         />,
                     ]}
-                />
-                <ImageCard
-                    imageSource={IvyAndZeus}
-                    imageSide="left"
-                    imageAltText="Picture of my cats"
-                    headerText="Break Time"
-                    cardBody={
-                        <>
-                            <p>
-                                Wow!  That was alot of text that you just read.  Take a break!
-                                Look at my cats! (Their names are Ivy and Zeus)
-                            </p>
-                            <p>Go stretch, get some water, and relax!</p>
-                        </>
-                    }
                 />
                 <CardRow
                     Cards={[
