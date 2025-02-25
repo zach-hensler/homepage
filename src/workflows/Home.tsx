@@ -20,7 +20,7 @@ export const Home: FunctionalComponent = () => {
                 cardBody={
                     <div>
                         <p>
-                            I am Zach Hensler, a fullstack web developer/software engineer. I have experience building responsive
+                            I am Zach Hensler, a fullstack web developer. I have experience building responsive
                             Front End applications using React and Typescript.  As well as updating RESTful APIs using C# and F#.
                         </p>
                         <p>If you have any questions that I don&apos;t cover here, feel free to:
@@ -47,7 +47,7 @@ export const Home: FunctionalComponent = () => {
                                 <li>React</li>
                                 <li>Typescript</li>
                                 <li>HTML/CSS</li>
-                                <li>GIT</li>
+                                <li>Github</li>
                                 <li>AWS</li>
                                 <li>Python</li>
                             </ul>
