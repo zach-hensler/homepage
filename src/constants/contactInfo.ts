@@ -1,4 +1,4 @@
-import Resume from '../assets/resume_2024_08_08.pdf';
+import Resume from '../assets/zachary_hensler_resume.pdf';
 
 const hostedUrl = "https://zach-hensler.github.io/";
 const sourceCodeUrl = "https://github.com/zach-hensler/";

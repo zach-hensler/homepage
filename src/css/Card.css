@@ -6,6 +6,10 @@
     margin: 0 -20px;
 }
 
+.card-row.column {
+    flex-direction: column;
+}
+
 .card-row-child {
     display: flex;
     flex: 999 0 40%;

@@ -34,7 +34,7 @@ export const Projects: FunctionalComponent = () => {
     return (
         <div>
             <h2>Projects</h2>
-            <CardRow Cards={[
+            <CardRow flexColumn={true} Cards={[
                 ProjectCard(
                     "Homepage",
                     "A web app for telling people about me! (This is where you are now).",
@@ -46,14 +46,7 @@ export const Projects: FunctionalComponent = () => {
                     "An art gallery web app.  All pieces uploaded were made by me! Features sorting by created date, " +
                     "and filtering by medium and/or subject.",
                     contactInfo.galleryUrl,
-                    contactInfo.gallerySource
-                ),
-                ProjectCard(
-                    "Dice Simulator",
-                    "A web app for simulating rolling dice of different quantities and side counts. " +
-                        "It additionally allows you to apply modifiers to the rolling, and view a histogram of the results.",
-                    contactInfo.diceSimUrl,
-                    contactInfo.diceSimSource,
+                    contactInfo.gallerySource,
                     true
                 ),
             ]} />
